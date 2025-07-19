@@ -12,8 +12,8 @@
 | 👤 **Username**         | `sj`                                                                                                                 |
 | 📅 **Created On**       | `19/07/2025 08:27 অপরাহ্ণ শনি GMT+6`                                                                                 |
 | 📍 **Location**         | Sharifpur, Gazipur, Dhaka                                                                                            |
-| 💼 **LinkedIn**         | [https://www.linkedin.com/in/shahjalal-mern/](https://www.linkedin.com/in/shahjalal-mern/)                           |
-| 📘 **Facebook**         | [https://www.facebook.com/profile.php?id=61556383702555](https://www.facebook.com/profile.php?id=61556383702555)     |
+| 💼 **LinkedIn**         | [https://www.linkedin.com/in/shahjalal-labs/](https://www.linkedin.com/in/shahjalal-labs/)                           |
+| 📘 **Facebook**         | [https://www.facebook.com/profile.php?id=61556383702555](https://www.facebook.com/shahjalal-labs)                    |
 | ▶️ **YouTube**          | [https://www.youtube.com/@muhommodshahjalal9811](https://www.youtube.com/@muhommodshahjalal9811)                     |
 
 ---
