@@ -8,15 +8,15 @@ This document outlines all MongoDB collections and their fields used in the back
 
 Stores all users including tourists, guides, and admins.
 
-| Field     | Type   | Description                                 |
-| --------- | ------ | ------------------------------------------- |
-| name      | String | Full name                                   |
-| email     | String | Unique email                                |
-| password  | String | Hashed password                             |
-| photoURL  | String | Profile picture                             |
-| role      | String | User role: 'tourist', 'tour-guide', 'admin' |
-| role      | String | User role: 'tourist', 'tour-guide', 'admin' |
-| createdAt | Date   | Auto-generated timestamp                    |
+| Field         | Type   | Description                                 |
+| ------------- | ------ | ------------------------------------------- |
+| name          | String | Full name                                   |
+| email         | String | Unique email                                |
+| password      | String | Hashed password                             |
+| photoURL      | String | Profile picture                             |
+| role          | String | User role: 'tourist', 'tour-guide', 'admin' |
+| last_loggedIn | Date   | Last login timestamp                        |
+| createdAt     | Date   | Auto-generated timestamp                    |
 
 ---
 
