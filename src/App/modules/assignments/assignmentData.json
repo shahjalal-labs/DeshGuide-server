@@ -1,0 +1,102 @@
+[
+  {
+    "_id": "684be0b0a15d0f1230098557",
+    "title": "This assignment is updated right now",
+    "description": "Find personalized assignments and study tasks that align with your courses and learning goals — no more irrelevant searching.",
+    "marks": 10,
+    "thumbnailUrl": "https://images.deepai.org/art-image/db207e69f2f54645b90073a029c9a82b/a-young-programmer-solving-javascript-coding-puzzles-.jpg",
+    "difficulty": "hard",
+    "dueDate": "03/07/25",
+    "creatorEmail": "nidaa.al.imaan.official@gmail.com"
+  },
+  {
+    "_id": "684be1a2a15d0f1230098667",
+    "title": "JavaScript Puzzle Challenge",
+    "description": "Solve tricky JavaScript problems that test your closures, scopes, and async understanding.",
+    "marks": 15,
+    "thumbnailUrl": "https://images.deepai.org/art-image/1d2ecf8dc87643b390c87a788e3c42ff/front-end-developer-working-with-css-grid-on-a-large-.jpg",
+    "difficulty": "hard",
+    "dueDate": "05/07/25",
+    "creatorEmail": "mentor@codingdojo.com"
+  },
+  {
+    "_id": "684be2c7a15d0f1230098778",
+    "title": "CSS Grid Layout Mastery",
+    "description": "Design responsive layouts using only CSS Grid. No Flexbox allowed.",
+    "marks": 20,
+    "thumbnailUrl": "https://images.deepai.org/art-image/6f480b27471548b58ff446d365f3c83f/react-developer-debugging-a-form-interface-highlighte.jpg",
+    "difficulty": "medium",
+    "dueDate": "08/07/25",
+    "creatorEmail": "web@layoutpro.dev"
+  },
+  {
+    "_id": "684be3d5a15d0f1230098889",
+    "title": "Debug the React Form",
+    "description": "Fix bugs in a broken React form, including validation and controlled components.",
+    "marks": 12,
+    "thumbnailUrl": "https://images.deepai.org/art-image/92e56026a0754d0298dd9b66894ceacc/api-engineer-designing-a-restful-architecture-with-po.jpg",
+    "difficulty": "medium",
+    "dueDate": "06/07/25",
+    "creatorEmail": "react@tasker.dev"
+  },
+  {
+    "_id": "684be4e1a15d0f1230098990",
+    "title": "Build a RESTful API",
+    "description": "Design a REST API for a blogging platform using Express and MongoDB.",
+    "marks": 25,
+    "thumbnailUrl": "https://images.deepai.org/art-image/ff1fd038326e40fba319cb457756dd75/junior-developer-creating-a-quiz-app-about-html-seman.jpg",
+    "difficulty": "hard",
+    "dueDate": "10/07/25",
+    "creatorEmail": "api@backend.dev"
+  },
+  {
+    "_id": "684be5f8a15d0f1230098001",
+    "title": "HTML Semantics Quiz",
+    "description": "Create a quiz app to test users on HTML semantic tags.",
+    "marks": 8,
+    "thumbnailUrl": "https://images.deepai.org/art-image/d289d406e21c4e0d99ee0901f5e8642c/coder-refactoring-old-javascript-to-typescript-surrou.jpg",
+    "difficulty": "easy",
+    "dueDate": "30/06/25",
+    "creatorEmail": "html@basic.dev"
+  },
+  {
+    "_id": "684be70aa15d0f1230098112",
+    "title": "TypeScript Refactor Assignment",
+    "description": "Refactor legacy JavaScript code into strongly typed TypeScript.",
+    "marks": 18,
+    "thumbnailUrl": "https://images.deepai.org/art-image/c55da655fc2f4926b7429b1bfb7f1839/coder-refactoring-old-javascript-to-typescript-surrou.jpg",
+    "difficulty": "medium",
+    "dueDate": "07/07/25",
+    "creatorEmail": "ts@refactor.dev"
+  },
+  {
+    "_id": "684be81ba15d0f1230098223",
+    "title": "Node.js Streams Task",
+    "description": "Build a CLI app that reads and writes data using Node.js streams.",
+    "marks": 16,
+    "thumbnailUrl": "https://images.deepai.org/art-image/cc595d71435c4c9bb9f9c156975befd3/cli-developer-working-with-node-js-streams-terminal-o.jpg",
+    "difficulty": "hard",
+    "dueDate": "12/07/25",
+    "creatorEmail": "cli@stream.dev"
+  },
+  {
+    "_id": "684be92fa15d0f1230098334",
+    "title": "Debugging DOM Events",
+    "description": "Identify and fix issues in DOM event handling code across a multipage website.",
+    "marks": 14,
+    "thumbnailUrl": "https://images.deepai.org/art-image/58946b34fccf4a6d93a704b5b98a668d/frontend-dev-fixing-dom-event-bugs-browser-inspector-.jpg",
+    "difficulty": "medium",
+    "dueDate": "04/07/25",
+    "creatorEmail": "events@frontend.dev"
+  },
+  {
+    "_id": "684bea41a15d0f1230098445",
+    "title": "Async/Await Deep Dive",
+    "description": "Complete code exercises focused on mastering async/await patterns and error handling.",
+    "marks": 20,
+    "thumbnailUrl": "https://images.deepai.org/art-image/d7be0eeb6cc348acb4326bd472418202/async-await-concepts-visualized-as-a-timeline-develop.jpg",
+    "difficulty": "hard",
+    "dueDate": "11/07/25",
+    "creatorEmail": "async@jsmaster.dev"
+  }
+]

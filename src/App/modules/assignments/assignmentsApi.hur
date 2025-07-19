@@ -1,0 +1,117 @@
+GET  http://localhost:5000/api/v1/assignments
+
+
+
+
+GET  http://localhost:5000
+
+
+GET  http://localhost:5000/not-found
+
+
+
+
+
+
+GET  http://localhost:5000/api/v1/assignments/684a56a999f83617489ebb2c
+
+
+
+
+DELETE http://localhost:5000/api/v1/assignments/delete-assignment/684a4b09b1de13c0699641df
+Cookie: token="add-your-token-here"
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+
+
+
+PATCH  http://localhost:5000/api/v1/update-assignment/684a56a999f83617489ebb2c
+Content-Type: application/json
+{
+    "thumbnailUrl": "https://i.ibb.co.com/PZ3DWGJk/developerpuzzles.png"
+}
+
+
+POST http://localhost:5000/api/v1/create-assignment
+Content-Type: application/json
+{
+    "title": "Build a Blog Platform with Node.js",
+    "description": "Create a complete blog application using Node.js, Express, and MongoDB that supports posts, comments, and user authentication.",
+    "marks": 100,
+    "thumbnailUrl": "https://i.ibb.co.com/PZ3DWGJk/developerpuzzles.png",
+    "difficulty": "medium",
+    "dueDate": "2025-07-01T00:00:00.000Z",
+    "creatorEmail": "teacher@eduverse.com"
+}
+
+
+
+POST  http://localhost:5000/api/v1/create-schedules
+
+Content-Type: application/json
+
+[
+  {
+    "title": "Chest Workout",
+    "day": "Monday",
+    "formattedDate": "2025-05-19",
+    "isCompleted": false
+  },
+  {
+    "title": "Back & Biceps",
+    "day": "Tuesday",
+    "formattedDate": "2025-05-20",
+    "isCompleted": false
+  },
+  {
+    "title": "Leg Day",
+    "day": "Wednesday",
+    "formattedDate": "2025-05-21",
+    "isCompleted": false
+  },
+  {
+    "title": "Cardio & Core",
+    "day": "Thursday",
+    "formattedDate": "2025-05-22",
+    "isCompleted": false
+  },
+  {
+    "title": "Shoulders & Triceps",
+    "day": "Friday",
+    "formattedDate": "2025-05-23",
+    "isCompleted": false
+  },
+  {
+    "title": "Full Body Stretch",
+    "day": "Saturday",
+    "formattedDate": "2025-05-24",
+    "isCompleted": false
+  },
+  {
+    "title": "Active Recovery Walk",
+    "day": "Sunday",
+    "formattedDate": "2025-05-25",
+    "isCompleted": false
+  },
+  {
+    "title": "Push Workout",
+    "day": "Monday",
+    "formattedDate": "2025-05-26",
+    "isCompleted": false
+  },
+  {
+    "title": "Pull Workout",
+    "day": "Tuesday",
+    "formattedDate": "2025-05-27",
+    "isCompleted": false
+  },
+  {
+    "title": "HIIT Session",
+    "day": "Wednesday",
+    "formattedDate": "2025-05-28",
+    "isCompleted": false
+  }
+]
+
+
+
