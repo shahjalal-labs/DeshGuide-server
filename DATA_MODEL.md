@@ -15,6 +15,7 @@ Stores all users including tourists, guides, and admins.
 | password  | String | Hashed password                             |
 | photoURL  | String | Profile picture                             |
 | role      | String | User role: 'tourist', 'tour-guide', 'admin' |
+| role      | String | User role: 'tourist', 'tour-guide', 'admin' |
 | createdAt | Date   | Auto-generated timestamp                    |
 
 ---
