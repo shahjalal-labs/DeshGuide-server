@@ -9,19 +9,11 @@ import dotenv from "dotenv";
 import { SubmissionRoutes } from "./App/modules/submission/submission.route.js";
 import { UserRoutes } from "./App/modules/users/users.route.js";
 import { PackageRoutes } from "./App/modules/packages/packages.route.js";
+import { corsOptions } from "./App/config/corsOptions.js";
 dotenv.config();
 
 const app = express();
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "http://localhost:5174",
-      "https://edu-verse.surge.sh",
-    ], // replace with your frontend URL
-    // credentials: true, // if you're using cookies/auth
-  }),
-);
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/v1/auth", AuthRoutes);

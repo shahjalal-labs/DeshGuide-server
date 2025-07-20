@@ -6,6 +6,8 @@
 ├── bun.lock
 ├── docs
 │   ├── DATA_MODEL.md
+│   ├── deployment.md
+│   ├── refractorDocsPrompt.md
 │   └── Requirement.md
 ├── package.json
 ├── README.md
@@ -33,6 +35,18 @@
 │   │   │   │   ├── auth.routes.js
 │   │   │   │   ├── issueJwt.js
 │   │   │   │   └── jwt.js
+│   │   │   ├── bookings
+│   │   │   │   ├── bookingsApi.hurl
+│   │   │   │   ├── bookings.controller.js
+│   │   │   │   ├── bookings.model.js
+│   │   │   │   ├── bookings.route.js
+│   │   │   │   └── bookings.service.js
+│   │   │   ├── packages
+│   │   │   │   ├── package.model.js
+│   │   │   │   ├── packagesApi.hurl
+│   │   │   │   ├── packages.controller.js
+│   │   │   │   ├── packages.route.js
+│   │   │   │   └── packages.service.js
 │   │   │   ├── submission
 │   │   │   │   ├── submissionApi.hur
 │   │   │   │   ├── submissionApi.hurl
@@ -42,6 +56,7 @@
 │   │   │   │   ├── submission.service.js
 │   │   │   │   └── submission.validation.js
 │   │   │   └── users
+│   │   │       ├── refractorUsersPrompt.md
 │   │   │       ├── usersApi.hurl
 │   │   │       ├── users.controller.js
 │   │   │       ├── users.model.js
@@ -58,6 +73,6 @@
 ├── structure.md
 └── vercel.json
 
-14 directories, 42 files
+16 directories, 55 files
 
 ```
