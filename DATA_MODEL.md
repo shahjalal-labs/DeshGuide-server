@@ -110,14 +110,12 @@ Stripe payment records.
 
 Admin announcements or offers.
 
-| Field     | Type   | Description  |
-| --------- | ------ | ------------ | --------- | ------------ |
-| title     | String | Title        |
-| message   | String | Main content |
-| target    | String | 'all'        | 'tourist' | 'tour-guide' |
-| createdAt | Date   | Timestamp    |
-
----
+| Field     | Type   | Description                                                 |
+| --------- | ------ | ----------------------------------------------------------- |
+| title     | String | Title of the announcement                                   |
+| message   | String | Main content/message                                        |
+| target    | String | Role target: one of `'all'`, `'tourist'`, or `'tour-guide'` |
+| createdAt | Date   | Auto-generated timestamp                                    |
 
 ## 📌 Relationships Summary
 
