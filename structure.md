@@ -42,7 +42,11 @@
 │   │   │   │   ├── submission.service.js
 │   │   │   │   └── submission.validation.js
 │   │   │   └── users
-│   │   │       └── users.model.js
+│   │   │       ├── usersApi.hurl
+│   │   │       ├── users.controller.js
+│   │   │       ├── users.model.js
+│   │   │       ├── users.route.js
+│   │   │       └── users.service.js
 │   │   └── utils
 │   │       ├── sendResponse.js
 │   │       └── validateRequest.js
@@ -54,6 +58,6 @@
 ├── structure.md
 └── vercel.json
 
-14 directories, 38 files
+14 directories, 42 files
 
 ```

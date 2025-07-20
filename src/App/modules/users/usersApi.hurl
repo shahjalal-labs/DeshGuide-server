@@ -1,25 +1,38 @@
-# Get all users
-GET http://localhost:5000/api/v1/users
+# ✅ Get all users
+GET https://deshguide-server.vercel.app/api/v1/users
 Accept: application/json
 
 
-# Get single user by ID
+# ✅ Get single user by ID
 GET http://localhost:5000/api/v1/users/USER_ID_HERE
 Accept: application/json
 
 
-# Update user by ID
+# ✅ Create new user
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "securePassword123",
+  "photoURL": "https://i.ibb.co/sample-image.png",
+  "role": "tourist"  // or "tour-guide", "admin"
+}
+
+
+# ✅ Update user by ID
 PATCH http://localhost:5000/api/v1/users/USER_ID_HERE
 Content-Type: application/json
 
 {
   "name": "Updated User",
-  "role": "tourist",
-  "image": "https://i.ibb.co/sample-image.png"
+  "role": "tour-guide",
+  "photoURL": "https://i.ibb.co/sample-image.png"
 }
 
 
-# Delete user by ID
+# ✅ Delete user by ID
 DELETE http://localhost:5000/api/v1/users/USER_ID_HERE
 Accept: application/json
 

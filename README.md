@@ -1,5 +1,9 @@
 # 🌟 DeshGuide-server
 
+## ✅ Live Server URL
+
+`https://deshguide-server.vercel.app/`
+
 ## 📂 Project Information
 
 | 📝 **Detail**           | 📌 **Value**                                                                                                         |
