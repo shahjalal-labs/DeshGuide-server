@@ -1,6 +1,19 @@
 // src/App/modules/users/users.controller.js
 import sendResponse from "../../utils/sendResponse.js";
 import { UserServices } from "./users.service.js";
+const createUser = async (req, res, next) => {
+  try {
+    const result = await UserServices.createUserIntoDB(req.body);
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Users created successfully!",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 
 const getAllUsers = async (req, res, next) => {
   try {
@@ -62,6 +75,7 @@ const deleteUser = async (req, res, next) => {
 };
 
 export const UserControllers = {
+  createUser,
   getAllUsers,
   getSingleUser,
   updateUser,

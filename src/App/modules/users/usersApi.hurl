@@ -15,9 +15,8 @@ Content-Type: application/json
 {
   "name": "John Doe",
   "email": "john@example.com",
-  "password": "securePassword123",
   "photoURL": "https://i.ibb.co/sample-image.png",
-  "role": "tourist"  // or "tour-guide", "admin"
+  "role": "tourist"  
 }
 
 

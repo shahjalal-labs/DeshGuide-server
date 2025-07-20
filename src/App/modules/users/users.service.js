@@ -1,6 +1,9 @@
 // src/App/modules/users/users.service.js
 import { User } from "./users.model.js";
-
+// ✅ Get All Users
+const createUserIntoDB = async (data) => {
+  return await User.create(data);
+};
 // ✅ Get All Users
 const getAllUsersFromDB = async () => {
   return await User.find().sort({ createdAt: -1 });
@@ -30,6 +33,7 @@ const deleteUserFromDB = async (id) => {
 };
 
 export const UserServices = {
+  createUserIntoDB,
   getAllUsersFromDB,
   getUserByIdFromDB,
   updateUserInDB,
