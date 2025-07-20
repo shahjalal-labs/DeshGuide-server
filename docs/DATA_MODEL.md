@@ -24,17 +24,19 @@ Stores all users including tourists, guides, and admins.
 
 Admin-created tour packages.
 
-| Field       | Type     | Description                      |
-| ----------- | -------- | -------------------------------- |
-| title       | String   | Trip title                       |
-| description | String   | Trip overview                    |
-| price       | Number   | Price in BDT                     |
-| tripType    | String   | Adventure / Relaxation / etc     |
-| days        | Number   | Number of days                   |
-| location    | String   | Tour location                    |
-| gallery     | [String] | Image URLs                       |
-| tourPlan    | [Object] | Day-wise plan (day + activities) |
-| createdAt   | Date     | Timestamp                        |
+| Field       | Type   | Description                  |
+| ----------- | ------ | ---------------------------- |
+| title       | String | Trip title                   |
+| description | String | Trip overview                |
+| price       | Number | Price in BDT                 |
+| tripType    | String | Adventure / Relaxation / etc |
+| days        | Number | Number of days               |
+
+u
+| location | String | Tour location |
+| gallery | [String] | Image URLs |
+| tourPlan | [Object] | Day-wise plan (day + activities) |
+| createdAt | Date | Timestamp |
 
 ---
 

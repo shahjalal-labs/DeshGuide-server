@@ -25,15 +25,14 @@ Content-Type: application/json
 }
 
 # ✅ Update package
-PATCH http://localhost:5000/api/v1/packages/ID_HERE
+PATCH http://localhost:5000/api/v1/packages/687ce1e14f0f363e8661d183
 Content-Type: application/json
 
 {
-  "price": 5000,
-  "days": 4
+  "price": 5000
 }
 
 # ✅ Delete package
-DELETE http://localhost:5000/api/v1/packages/ID_HERE
+DELETE http://localhost:5000/api/v1/packages/687ce3054f0f363e8661d187
 Accept: application/json
 
