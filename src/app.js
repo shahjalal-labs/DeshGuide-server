@@ -7,6 +7,7 @@ import { AssignmentRoutes } from "./App/modules/assignments/assignments.route.js
 import { AuthRoutes } from "./App/modules/auth/auth.routes.js";
 import dotenv from "dotenv";
 import { SubmissionRoutes } from "./App/modules/submission/submission.route.js";
+import { UserRoutes } from "./App/modules/users/users.route.js";
 dotenv.config();
 
 const app = express();
@@ -25,9 +26,10 @@ app.use(cookieParser());
 app.use("/api/v1/auth", AuthRoutes);
 app.use("/api/v1/assignments", AssignmentRoutes);
 app.use("/api/v1/submission", SubmissionRoutes);
+app.use("/api/v1/users", UserRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Assalamu alaikum, Welcome to the EduVers server !");
+  res.send("Assalamu alaikum, Welcome to the DeshGuide server !");
 });
 
 app.use(globalErrorHandler);
