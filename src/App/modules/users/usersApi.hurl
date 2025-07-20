@@ -1,7 +1,6 @@
 687cc5b9feaf9ecda8ac1848
 # ✅ Get all users
 GET https://deshguide-server.vercel.app/api/v1/users
-Accept: application/json
 
 
 # ✅ Get single user by ID
@@ -35,5 +34,4 @@ Content-Type: application/json
 # ✅ Delete user by ID
 DELETE http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac1848
 
-Accept: application/json
 

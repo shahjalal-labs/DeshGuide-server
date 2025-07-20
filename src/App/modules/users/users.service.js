@@ -3,7 +3,7 @@ import { User } from "./users.model.js";
 // ✅ Get All Users
 // src/App/modules/users/users.service.js
 const createUserIntoDB = async (data) => {
-  const existingUser = await User.findOne({ email: data.email });
+  const existingUser = await User.findOne({ email: data?.email });
 
   if (existingUser) {
     existingUser.last_loggedIn = new Date();
