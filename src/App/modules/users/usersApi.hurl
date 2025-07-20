@@ -14,9 +14,9 @@ Content-Type: application/json
 
 {
   "name": "John Doe",
-  "email": "john@example.com",
+  "email": "admin@example.com",
   "photoURL": "https://i.ibb.co/sample-image.png",
-  "role": "tourist"  
+  "role": "admin"  
 }
 
 
@@ -33,5 +33,4 @@ Content-Type: application/json
 
 # ✅ Delete user by ID
 DELETE http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac1848
-
 
