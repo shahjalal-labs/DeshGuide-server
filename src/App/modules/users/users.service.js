@@ -1,5 +1,5 @@
 // src/App/modules/users/users.service.js
-import User from "./users.model.js";
+import { User } from "./users.model.js";
 
 // ✅ Get All Users
 const getAllUsersFromDB = async () => {
