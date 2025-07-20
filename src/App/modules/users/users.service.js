@@ -1,8 +1,35 @@
 // src/App/modules/users/users.service.js
 import { User } from "./users.model.js";
 // ✅ Get All Users
+// src/App/modules/users/users.service.js
 const createUserIntoDB = async (data) => {
-  return await User.create(data);
+  const existingUser = await User.findOne({ email: data.email });
+
+  const currentDate = new Date();
+  const formattedDate = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    currentDate.getDate(),
+  );
+
+  if (existingUser) {
+    existingUser.last_loggedIn = formattedDate;
+    await existingUser.save();
+    return {
+      user: existingUser,
+      alreadyExisted: true,
+    };
+  }
+
+  const newUser = await User.create({
+    ...data,
+    last_loggedIn: formattedDate,
+  });
+
+  return {
+    user: newUser,
+    alreadyExisted: false,
+  };
 };
 // ✅ Get All Users
 const getAllUsersFromDB = async () => {

@@ -1,14 +1,20 @@
 // src/App/modules/users/users.controller.js
 import sendResponse from "../../utils/sendResponse.js";
 import { UserServices } from "./users.service.js";
+// src/App/modules/users/users.controller.js
 const createUser = async (req, res, next) => {
   try {
     const result = await UserServices.createUserIntoDB(req.body);
+
+    const message = result.alreadyExisted
+      ? "User already existed, updated last_loggedIn time."
+      : "User created successfully!";
+
     sendResponse(res, {
       statusCode: 200,
       success: true,
-      message: "Users created successfully!",
-      data: result,
+      message,
+      data: result.user,
     });
   } catch (error) {
     next(error);
