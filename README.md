@@ -9,7 +9,6 @@
 | 💻 **Portfolio GitHub** | [https://github.com/shahjalal-labs/shahjalal-portfolio-v2](https://github.com/shahjalal-labs/shahjalal-portfolio-v2) |
 | 🌐 **Portfolio Live**   | [http://shahjalal-mern.surge.sh](http://shahjalal-mern.surge.sh)                                                     |
 | 📁 **Directory**        | `/run/media/sj/developer/web/L1B11/12mi/ass/DeshGuide/DeshGuide-server`                                              |
-| 👤 **Username**         | `sj`                                                                                                                 |
 | 📅 **Created On**       | `19/07/2025 08:27 অপরাহ্ণ শনি GMT+6`                                                                                 |
 | 📍 **Location**         | Sharifpur, Gazipur, Dhaka                                                                                            |
 | 💼 **LinkedIn**         | [https://www.linkedin.com/in/shahjalal-labs/](https://www.linkedin.com/in/shahjalal-labs/)                           |
@@ -23,4 +22,3 @@
 ![Developer Info:](https://i.ibb.co/kVR4YmrX/developer-Info-Github-Banner.png)
 
 > 🚀
-
