@@ -17,9 +17,18 @@ const packageSchema = new mongoose.Schema(
     price: { type: Number, required: true },
     tripType: {
       type: String,
-      enum: ["Adventure", "Relaxation", "Cultural", "Nature", "Other"],
       required: true,
+      enum: [
+        "Adventure",
+        "Relaxation",
+        "Cultural",
+        "Nature",
+        "Historical",
+        "Other",
+      ],
+      default: "Adventure",
     },
+
     days: { type: Number, required: true },
     location: { type: String, required: true },
     gallery: [{ type: String }],

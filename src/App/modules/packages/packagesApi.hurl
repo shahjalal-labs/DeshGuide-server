@@ -14,7 +14,7 @@ Content-Type: application/json
   "title": "Sajek Adventure",
   "description": "A trip to the scenic Sajek Valley",
   "price": 4500,
-  "tripType": "Adventure",
+  "tripType": "Relaxation",
   "days": 3,
   "location": "Sajek",
   "gallery": ["https://img.url/1.jpg", "https://img.url/2.jpg"],
