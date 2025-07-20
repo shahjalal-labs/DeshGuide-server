@@ -1,10 +1,11 @@
+687cc5b9feaf9ecda8ac1848
 # ✅ Get all users
 GET https://deshguide-server.vercel.app/api/v1/users
 Accept: application/json
 
 
 # ✅ Get single user by ID
-GET http://localhost:5000/api/v1/users/USER_ID_HERE
+GET http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac1848
 Accept: application/json
 
 
@@ -21,7 +22,7 @@ Content-Type: application/json
 
 
 # ✅ Update user by ID
-PATCH http://localhost:5000/api/v1/users/USER_ID_HERE
+PATCH http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac1838
 Content-Type: application/json
 
 {
@@ -32,6 +33,7 @@ Content-Type: application/json
 
 
 # ✅ Delete user by ID
-DELETE http://localhost:5000/api/v1/users/USER_ID_HERE
+DELETE http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac1848
+
 Accept: application/json
 

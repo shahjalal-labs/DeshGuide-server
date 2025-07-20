@@ -5,15 +5,8 @@ import { User } from "./users.model.js";
 const createUserIntoDB = async (data) => {
   const existingUser = await User.findOne({ email: data.email });
 
-  const currentDate = new Date();
-  const formattedDate = new Date(
-    currentDate.getFullYear(),
-    currentDate.getMonth(),
-    currentDate.getDate(),
-  );
-
   if (existingUser) {
-    existingUser.last_loggedIn = formattedDate;
+    existingUser.last_loggedIn = new Date();
     await existingUser.save();
     return {
       user: existingUser,
@@ -23,7 +16,7 @@ const createUserIntoDB = async (data) => {
 
   const newUser = await User.create({
     ...data,
-    last_loggedIn: formattedDate,
+    last_loggedIn: new Date(),
   });
 
   return {
@@ -43,10 +36,16 @@ const getUserByIdFromDB = async (id) => {
 
 // ✅ Update User
 const updateUserInDB = async (id, updatedData) => {
-  return await User.findByIdAndUpdate(id, updatedData, {
+  const updatedUser = await User.findByIdAndUpdate(id, updatedData, {
     new: true,
     runValidators: true,
   });
+
+  if (!updatedUser) {
+    throw new Error("User not found");
+  }
+
+  return updatedUser;
 };
 
 // ✅ Delete User
