@@ -8,6 +8,7 @@ import { AuthRoutes } from "./App/modules/auth/auth.routes.js";
 import dotenv from "dotenv";
 import { SubmissionRoutes } from "./App/modules/submission/submission.route.js";
 import { UserRoutes } from "./App/modules/users/users.route.js";
+import { PackageRoutes } from "./App/modules/packages/packages.route.js";
 dotenv.config();
 
 const app = express();
@@ -27,6 +28,7 @@ app.use("/api/v1/auth", AuthRoutes);
 app.use("/api/v1/assignments", AssignmentRoutes);
 app.use("/api/v1/submission", SubmissionRoutes);
 app.use("/api/v1/users", UserRoutes);
+app.use("/api/v1/packages", PackageRoutes);
 
 app.get("/", (req, res) => {
   res.send("Assalamu alaikum, Welcome to the DeshGuide server !");

@@ -1,5 +1,6 @@
 // src/App/modules/packages/packages.service.js
-import { Package } from "./packages.model.js";
+
+import { Package } from "./package.model.js";
 
 const createPackage = async (data) => {
   return await Package.create(data);
