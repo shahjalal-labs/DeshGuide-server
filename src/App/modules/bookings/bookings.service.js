@@ -47,3 +47,13 @@ const getBookingsByGuide = async (guideId) => {
   );
   return result;
 };
+
+export const BookingService = {
+  createBooking,
+  getAllBookings,
+  getBookingById,
+  updateBookingById,
+  deleteBookingById,
+  getBookingsByTourist,
+  getBookingsByGuide,
+};
