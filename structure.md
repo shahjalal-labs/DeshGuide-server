@@ -1,6 +1,12 @@
+# 📁 Project Structure
+
+```bash
 .
 ├── bars.env.example
 ├── bun.lock
+├── docs
+│   ├── DATA_MODEL.md
+│   └── Requirement.md
 ├── package.json
 ├── README.md
 ├── src
@@ -27,20 +33,27 @@
 │   │   │   │   ├── auth.routes.js
 │   │   │   │   ├── issueJwt.js
 │   │   │   │   └── jwt.js
-│   │   │   └── submission
-│   │   │       ├── submissionApi.hur
-│   │   │       ├── submissionApi.hurl
-│   │   │       ├── submission.controller.js
-│   │   │       ├── submission.model.js
-│   │   │       ├── submission.route.js
-│   │   │       ├── submission.service.js
-│   │   │       └── submission.validation.js
+│   │   │   ├── submission
+│   │   │   │   ├── submissionApi.hur
+│   │   │   │   ├── submissionApi.hurl
+│   │   │   │   ├── submission.controller.js
+│   │   │   │   ├── submission.model.js
+│   │   │   │   ├── submission.route.js
+│   │   │   │   ├── submission.service.js
+│   │   │   │   └── submission.validation.js
+│   │   │   └── users
+│   │   │       └── users.model.js
 │   │   └── utils
 │   │       ├── sendResponse.js
 │   │       └── validateRequest.js
 │   ├── app.js
+│   ├── assets
+│   │   └── images
+│   │       └── requirement.jpg
 │   └── server.js
 ├── structure.md
 └── vercel.json
 
-10 directories, 34 files
+14 directories, 38 files
+
+```
