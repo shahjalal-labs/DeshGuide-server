@@ -1,11 +1,37 @@
 import { Booking } from "./bookings.model.js";
 
 // Create a new booking
+/* export const createBooking = async (bookingData) => {
+  const result = await Booking.create(bookingData);
+  return result;
+}; */
+
+import { Package } from "../packages/package.model.js";
+import { User } from "../users/users.model.js"; // assuming tourists & guides are users
+
 export const createBooking = async (bookingData) => {
+  const { packageId, guideId, touristId } = bookingData;
+
+  // Validate package
+  const pkg = await Package.findById(packageId);
+  if (!pkg) throw new Error("Invalid packageId — Package not found");
+
+  // Validate guide
+  const guide = await User.findById(guideId);
+  if (!guide || guide.role !== "tour-guide") {
+    throw new Error("Invalid guideId — Guide not found");
+  }
+
+  // Validate tourist
+  const tourist = await User.findById(touristId);
+  if (!tourist || tourist.role !== "tourist") {
+    throw new Error("Invalid touristId — Tourist not found");
+  }
+
+  // Now create the booking
   const result = await Booking.create(bookingData);
   return result;
 };
-
 // Get all bookings (with optional filters)
 const getAllBookings = async (filter = {}) => {
   const result = await Booking.find(filter).populate(
