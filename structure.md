@@ -70,6 +70,8 @@
 │   │   │       ├── users.model.js
 │   │   │       ├── users.route.js
 │   │   │       └── users.service.js
+│   │   ├── routes
+│   │   │   └── routes.js
 │   │   └── utils
 │   │       ├── sendResponse.js
 │   │       └── validateRequest.js
@@ -81,6 +83,6 @@
 ├── structure.md
 └── vercel.json
 
-17 directories, 62 files
+18 directories, 63 files
 
 ```
