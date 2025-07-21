@@ -5,7 +5,7 @@ Accept: application/json
 ###
 
 # ✅ Get single payment by ID
-GET http://localhost:5000/api/v1/payments/PASTE_PAYMENT_ID_HERE
+GET http://localhost:5000/api/v1/payments/687e2cf7cbfa711f312c2f03
 Accept: application/json
 
 ###
@@ -15,7 +15,7 @@ POST http://localhost:5000/api/v1/payments
 Content-Type: application/json
 
 {
-  "bookingId": "PASTE_BOOKING_ID_HERE",
+  "bookingId": "687d9855289cd4c61c2b0c9a",
   "amount": 5000,
   "email": "john@example.com",
   "transactionId": "txn_123456789"
@@ -24,6 +24,6 @@ Content-Type: application/json
 ###
 
 # ✅ Delete payment
-DELETE http://localhost:5000/api/v1/payments/PASTE_PAYMENT_ID_HERE
+DELETE http://localhost:5000/api/v1/payments/687e2cf7cbfa711f312c2f03
 Accept: application/json
 

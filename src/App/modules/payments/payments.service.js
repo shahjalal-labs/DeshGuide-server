@@ -10,7 +10,11 @@ const getAllPayments = async () => {
 };
 
 const getPaymentById = async (id) => {
-  return await Payment.findById(id);
+  const res = await Payment.findById(id).populate("bookingId");
+  if (!res) {
+    throw new Error("Payment not found");
+  }
+  return res;
 };
 
 const deletePayment = async (id) => {
