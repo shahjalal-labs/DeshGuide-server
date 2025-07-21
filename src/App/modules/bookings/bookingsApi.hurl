@@ -11,15 +11,15 @@ POST http://localhost:5000/api/v1/bookings
 Content-Type: application/json
 
 {
-  "packageId": "PACKAGE_ID_HERE",
+  "packageId": "687ce1e14f0f363e8661d183",
   "packageName": "Sajek Adventure",
-  "touristId": "USER_ID_HERE",
-  "touristName": "Shahjalal",
-  "touristEmail": "shahjalal@example.com",
-  "touristPhoto": "https://image.url/photo.jpg",
-  "guideId": "GUIDE_ID_HERE",
-  "guideName": "Abir Bhai",
-  "price": 4500,
+  "touristId": "687ccd783d8c8c7d294a0fca",
+  "touristName": "John Doe",
+  "touristEmail": "john@example.com",
+  "touristPhoto": "https://i.ibb.co/sample-image.png",
+  "guideId": "687cff8d095a1d459861b897",
+  "guideName": "John Doe",
+  "price": 5000,
   "tourDate": "2025-08-01T00:00:00.000Z",
   "status": "pending",
   "paymentStatus": "unpaid",

@@ -56,6 +56,7 @@ const bookingSchema = new mongoose.Schema(
     },
     transactionId: {
       type: String,
+      default: "",
     },
   },
   {
