@@ -21,7 +21,7 @@ Content-Type: application/json
 
 
 # ✅ Update request status (e.g., accept or reject)
-PATCH http://localhost:5000/api/v1/tour-guide-requests/ID_HERE
+PATCH http://localhost:5000/api/v1/tour-guide-requests/687dd50b1ff686fc8ebc3cae
 Content-Type: application/json
 
 {
@@ -30,6 +30,6 @@ Content-Type: application/json
 
 
 # ✅ Delete tour guide request
-DELETE http://localhost:5000/api/v1/tour-guide-requests/687dd5aaf84d267585e5adc9
+DELETE http://localhost:5000/api/v1/tour-guide-requests/687dd58d3987aead25850d6c
 Accept: application/json
 

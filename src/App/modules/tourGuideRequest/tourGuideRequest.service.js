@@ -1,3 +1,4 @@
+import { User } from "../users/users.model.js";
 import { TourGuideRequest } from "./tourGuideRequest.model.js";
 
 const createTourGuideRequest = async (data) => {
@@ -11,7 +12,10 @@ const createTourGuideRequest = async (data) => {
 };
 
 const getAllTourGuideRequests = async () => {
-  return await TourGuideRequest.find().populate("userId", "name email photo");
+  return await TourGuideRequest.find().populate(
+    "userId",
+    "name email photo role",
+  );
 };
 
 const getTourGuideRequestById = async (id) => {
@@ -19,11 +23,18 @@ const getTourGuideRequestById = async (id) => {
 };
 
 const updateTourGuideRequestStatus = async (id, status) => {
-  return await TourGuideRequest.findByIdAndUpdate(
+  const res = await TourGuideRequest.findByIdAndUpdate(
     id,
     { status },
     { new: true },
   );
+  if (res._id) {
+    const roleUpdated = await User.updateOne({
+      role: "tour-guide",
+    });
+    console.log(roleUpdated, "tourGuideRequest.service.js", 33);
+  }
+  return res;
 };
 
 const deleteTourGuideRequest = async (id) => {

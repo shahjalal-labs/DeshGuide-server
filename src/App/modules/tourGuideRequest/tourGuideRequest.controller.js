@@ -11,7 +11,7 @@ const createRequest = async (req, res, next) => {
     sendResponse(res, {
       statusCode: 201,
       success: true,
-      message: "Request submitted successfully",
+      message: "Tour guide created successfully",
       data: result,
     });
   } catch (err) {
@@ -41,7 +41,7 @@ const getRequestById = async (req, res, next) => {
     sendResponse(res, {
       statusCode: 200,
       success: true,
-      message: "Request fetched",
+      message: "Tour guide fetched",
       data: result,
     });
   } catch (err) {
@@ -74,7 +74,7 @@ const deleteRequest = async (req, res, next) => {
     sendResponse(res, {
       statusCode: 200,
       success: true,
-      message: "Request deleted",
+      message: "Tour guide deleted",
       data: result,
     });
   } catch (err) {
