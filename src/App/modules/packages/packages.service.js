@@ -1,5 +1,6 @@
 // src/App/modules/packages/packages.service.js
 
+import { Booking } from "../bookings/bookings.model.js";
 import { Package } from "./package.model.js";
 
 const createPackage = async (data) => {
@@ -24,7 +25,14 @@ const updatePackage = async (id, updatedData) => {
 const deletePackage = async (id) => {
   const pkg = await Package.findById(id);
   if (!pkg) throw new Error("Package not found");
-  return await Package.findByIdAndDelete(id);
+
+  // Delete all bookings related to this package
+  await Booking.deleteMany({ packageId: id });
+
+  // Delete the package
+  const deletedPackage = await Package.findByIdAndDelete(id);
+
+  return deletedPackage;
 };
 
 export const PackageServices = {

@@ -36,7 +36,8 @@ const deleteBookingById = async (id) => {
 
 // Get bookings by touristId (dashboard usage)
 const getBookingsByTourist = async (touristId) => {
-  const result = await Booking.find({ touristId }).populate("packageId");
+  // const result = await Booking.find({ touristId }).populate("packageId");
+  const result = await Booking.find({ touristId });
   return result;
 };
 

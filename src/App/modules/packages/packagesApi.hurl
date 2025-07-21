@@ -33,6 +33,6 @@ Content-Type: application/json
 }
 
 # ✅ Delete package
-DELETE http://localhost:5000/api/v1/packages/687ce3054f0f363e8661d187
+DELETE http://localhost:5000/api/v1/packages/687ce1e14f0f363e8661d183
 Accept: application/json
 

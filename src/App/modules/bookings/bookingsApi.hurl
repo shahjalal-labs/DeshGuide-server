@@ -34,14 +34,12 @@ Content-Type: application/json
 }
 
 # ✅ Delete booking
-DELETE http://localhost:5000/api/v1/bookings/BOOKING_ID_HERE
-Accept: application/json
+DELETE http://localhost:5000/api/v1/bookings/687d87c1385d0ad42e797a27
 
 # ✅ Get bookings by tourist
-GET http://localhost:5000/api/v1/bookings/tourist/USER_ID_HERE
-Accept: application/json
+GET http://localhost:5000/api/v1/bookings/tourist/687ccd783d8c8c7d294a0fca
 
 # ✅ Get bookings by guide
-GET http://localhost:5000/api/v1/bookings/guide/GUIDE_ID_HERE
+GET http://localhost:5000/api/v1/bookings/guide/687cff8d095a1d459861b897
 Accept: application/json
 

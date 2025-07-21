@@ -79,6 +79,7 @@ const deleteBooking = async (req, res, next) => {
 const getBookingsByTourist = async (req, res, next) => {
   try {
     const { id } = req.params;
+    console.log(id, "bookings.controller.js", 82);
     const result = await BookingServices.getBookingsByTourist(id);
     sendResponse(res, {
       statusCode: 200,
