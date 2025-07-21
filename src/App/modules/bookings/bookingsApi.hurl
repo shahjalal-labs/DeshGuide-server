@@ -1,10 +1,8 @@
 # ✅ Get all bookings
 GET http://localhost:5000/api/v1/bookings
-Accept: application/json
 
 # ✅ Get single booking
-GET http://localhost:5000/api/v1/bookings/BOOKING_ID_HERE
-Accept: application/json
+GET http://localhost:5000/api/v1/bookings/687d8734385d0ad42e797a1d
 
 # ✅ Create new booking
 POST http://localhost:5000/api/v1/bookings
@@ -27,7 +25,7 @@ Content-Type: application/json
 }
 
 # ✅ Update booking (e.g., mark as accepted or paid)
-PATCH http://localhost:5000/api/v1/bookings/BOOKING_ID_HERE
+PATCH http://localhost:5000/api/v1/bookings/687d87c8385d0ad42e797a29
 Content-Type: application/json
 
 {

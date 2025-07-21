@@ -1,117 +1,18 @@
-// src/App/modules/bookings/bookings.controller.js
+// src/App/modules/bookings/bookings.route.js
 
-import sendResponse from "../../utils/sendResponse.js";
-import * as BookingServices from "./bookings.service.js";
+import express from "express";
+import { BookingControllers } from "./bookings.controller.js";
 
-const createBooking = async (req, res, next) => {
-  try {
-    const result = await BookingServices.createBooking(req.body);
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Booking created successfully!",
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
+const router = express.Router();
 
-const getAllBookings = async (req, res, next) => {
-  try {
-    const result = await BookingServices.getAllBookings();
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Bookings retrieved successfully!",
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
+router.post("/", BookingControllers.createBooking);
+router.get("/", BookingControllers.getAllBookings);
+router.get("/:id", BookingControllers.getSingleBooking);
+router.patch("/:id", BookingControllers.updateBooking);
+router.delete("/:id", BookingControllers.deleteBooking);
 
-const getSingleBooking = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const result = await BookingServices.getBookingById(id);
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Booking retrieved successfully!",
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
+// Additional filters
+router.get("/tourist/:id", BookingControllers.getBookingsByTourist);
+router.get("/guide/:id", BookingControllers.getBookingsByGuide);
 
-const updateBooking = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const result = await BookingServices.updateBookingById(id, req.body);
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Booking updated successfully!",
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-
-const deleteBooking = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const result = await BookingServices.deleteBookingById(id);
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Booking deleted successfully!",
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-
-const getBookingsByTourist = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const result = await BookingServices.getBookingsByTourist(id);
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Tourist bookings retrieved successfully!",
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-
-const getBookingsByGuide = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const result = await BookingServices.getBookingsByGuide(id);
-    sendResponse(res, {
-      statusCode: 200,
-      success: true,
-      message: "Guide bookings retrieved successfully!",
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-
-export const BookingControllers = {
-  createBooking,
-  getAllBookings,
-  getSingleBooking,
-  updateBooking,
-  deleteBooking,
-  getBookingsByTourist,
-  getBookingsByGuide,
-};
+export const BookingRoutes = router;

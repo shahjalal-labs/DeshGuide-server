@@ -48,7 +48,7 @@ const getBookingsByGuide = async (guideId) => {
   return result;
 };
 
-export const BookingService = {
+export const BookingServices = {
   createBooking,
   getAllBookings,
   getBookingById,

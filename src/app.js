@@ -10,6 +10,7 @@ import { SubmissionRoutes } from "./App/modules/submission/submission.route.js";
 import { UserRoutes } from "./App/modules/users/users.route.js";
 import { PackageRoutes } from "./App/modules/packages/packages.route.js";
 import { corsOptions } from "./App/config/corsOptions.js";
+import { BookingRoutes } from "./App/modules/bookings/bookings.route.js";
 dotenv.config();
 
 const app = express();

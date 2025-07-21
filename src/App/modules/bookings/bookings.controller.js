@@ -1,7 +1,7 @@
 // src/App/modules/bookings/bookings.controller.js
 
 import sendResponse from "../../utils/sendResponse.js";
-import * as BookingServices from "./bookings.service.js";
+import { BookingServices } from "./bookings.service.js";
 
 const createBooking = async (req, res, next) => {
   try {
