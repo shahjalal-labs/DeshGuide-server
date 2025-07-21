@@ -1,56 +1,85 @@
-const createRequest = catchAsync(async (req, res) => {
-  const result = await service.createTourGuideRequest(req.body);
-  sendResponse(res, {
-    statusCode: 201,
-    success: true,
-    message: "Request submitted successfully",
-    data: result,
-  });
-});
+// src/App/modules/tourGuideRequest/tourGuideRequest.controller.js
 
-const getAllRequests = catchAsync(async (req, res) => {
-  const result = await service.getAllTourGuideRequests();
-  sendResponse(res, {
-    statusCode: 200,
-    success: true,
-    message: "All requests fetched",
-    data: result,
-  });
-});
+import { TourGuideRequestServices } from "./tourGuideRequest.service";
 
-const getRequestById = catchAsync(async (req, res) => {
-  const result = await service.getTourGuideRequestById(req.params.id);
-  sendResponse(res, {
-    statusCode: 200,
-    success: true,
-    message: "Request fetched",
-    data: result,
-  });
-});
+const createRequest = async (req, res, next) => {
+  try {
+    const result = await TourGuideRequestServices.createTourGuideRequest(
+      req.body,
+    );
+    sendResponse(res, {
+      statusCode: 201,
+      success: true,
+      message: "Request submitted successfully",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 
-const updateStatus = catchAsync(async (req, res) => {
-  const { status } = req.body;
-  const result = await service.updateTourGuideRequestStatus(
-    req.params.id,
-    status,
-  );
-  sendResponse(res, {
-    statusCode: 200,
-    success: true,
-    message: "Status updated",
-    data: result,
-  });
-});
+const getAllRequests = async (req, res, next) => {
+  try {
+    const result = await TourGuideRequestServices.getAllTourGuideRequests();
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "All requests fetched",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 
-const deleteRequest = catchAsync(async (req, res) => {
-  const result = await service.deleteTourGuideRequest(req.params.id);
-  sendResponse(res, {
-    statusCode: 200,
-    success: true,
-    message: "Request deleted",
-    data: result,
-  });
-});
+const getRequestById = async (req, res, next) => {
+  try {
+    const result = await TourGuideRequestServices.getTourGuideRequestById(
+      req.params.id,
+    );
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Request fetched",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+const updateStatus = async (req, res, next) => {
+  try {
+    const result = await TourGuideRequestServices.updateTourGuideRequestStatus(
+      req.params.id,
+      req.body.status,
+    );
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Status updated",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+const deleteRequest = async (req, res, next) => {
+  try {
+    const result = await TourGuideRequestServices.deleteTourGuideRequest(
+      req.params.id,
+    );
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Request deleted",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 
 export const TourGuideRequestControllers = {
   createRequest,

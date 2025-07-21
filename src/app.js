@@ -23,6 +23,7 @@ app.use("/api/v1/submission", SubmissionRoutes);
 app.use("/api/v1/users", UserRoutes);
 app.use("/api/v1/packages", PackageRoutes);
 app.use("/api/v1/bookings", BookingRoutes);
+app.use("/api/v1/tour-guide-requests", TourGuideRequestRoutes);
 
 app.get("/", (req, res) => {
   res.send("Assalamu alaikum, Welcome to the DeshGuide server !");
