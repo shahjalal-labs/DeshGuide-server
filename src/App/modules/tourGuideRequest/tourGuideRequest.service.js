@@ -2,6 +2,14 @@ import { User } from "../users/users.model.js";
 import { TourGuideRequest } from "./tourGuideRequest.model.js";
 
 const createTourGuideRequest = async (data) => {
+  const existUser = await User.findById({
+    _id: data.userId,
+  });
+  console.log(existUser, "tourGuideRequest.service.js", 6);
+
+  if (!existUser) {
+    throw new Error("User not found");
+  }
   const existingGuide = await TourGuideRequest.findOne({
     userId: data.userId,
   });

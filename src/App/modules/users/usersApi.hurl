@@ -32,5 +32,6 @@ Content-Type: application/json
 
 
 # ✅ Delete user by ID
-DELETE http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac1848
+DELETE http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac184a
+
 
