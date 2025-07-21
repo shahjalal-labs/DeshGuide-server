@@ -12,7 +12,7 @@ POST http://localhost:5000/api/v1/tour-guide-requests
 Content-Type: application/json
 
 {
-  "userId": "687ccd783d8c8c7d294a0fca",
+  "userId": "687ccd783d8c8c7d294a0fc9",
   "title": "Experienced Mountain Guide",
   "reason": "I love guiding tourists and know every trail in the hills",
   "cvLink": "https://example.com/cv/john_doe.pdf",

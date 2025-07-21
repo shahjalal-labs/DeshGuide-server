@@ -26,12 +26,20 @@ const createUserIntoDB = async (data) => {
 };
 // ✅ Get All Users
 const getAllUsersFromDB = async () => {
-  return await User.find().sort({ createdAt: -1 });
+  const res = await User.find().sort({ createdAt: -1 });
+  if (!res) {
+    throw new Error("User not found");
+  }
+  return res;
 };
 
 // ✅ Get Single User by ID
 const getUserByIdFromDB = async (id) => {
-  return await User.findById(id);
+  const res = await User.findById(id);
+  if (!res) {
+    throw new Error("User not found");
+  }
+  return res;
 };
 
 // ✅ Update User

@@ -6,7 +6,7 @@ const createTourGuideRequest = async (data) => {
     userId: data.userId,
   });
   if (existingGuide) {
-    throw new Error("User already exists");
+    throw new Error("Tour  guide already exists");
   }
   return await TourGuideRequest.create(data);
 };
@@ -28,7 +28,7 @@ const updateTourGuideRequestStatus = async (id, status) => {
     { status },
     { new: true },
   );
-  if (res._id) {
+  if (res.status === "accepted") {
     const roleUpdated = await User.updateOne({
       role: "tour-guide",
     });
