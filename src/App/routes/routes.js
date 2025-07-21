@@ -7,6 +7,7 @@ import { PackageRoutes } from "../modules/packages/packages.route.js";
 import { BookingRoutes } from "../modules/bookings/bookings.route.js";
 import { TourGuideRequestRoutes } from "../modules/tourGuideRequest/tourGuideRequest.route.js";
 import { PaymentRoutes } from "../modules/payments/payments.route.js";
+import { StoryRoutes } from "../modules/stories/stories.route.js";
 
 export const routes = [
   { path: "/auth", route: AuthRoutes },
@@ -17,4 +18,5 @@ export const routes = [
   { path: "/bookings", route: BookingRoutes },
   { path: "/tour-guide-requests", route: TourGuideRequestRoutes },
   { path: "/payments", route: PaymentRoutes },
+  { path: "/stories", route: StoryRoutes },
 ];

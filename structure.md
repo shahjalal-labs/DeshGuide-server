@@ -49,6 +49,17 @@
 │   │   │   │   ├── packages.controller.js
 │   │   │   │   ├── packages.route.js
 │   │   │   │   └── packages.service.js
+│   │   │   ├── payments
+│   │   │   │   ├── paymentsApi.hurl
+│   │   │   │   ├── payments.controller.js
+│   │   │   │   ├── payments.model.js
+│   │   │   │   ├── payments.route.js
+│   │   │   │   └── payments.service.js
+│   │   │   ├── stories
+│   │   │   │   ├── stories.controller.js
+│   │   │   │   ├── stories.model.js
+│   │   │   │   ├── stories.route.js
+│   │   │   │   └── stories.service.js
 │   │   │   ├── submission
 │   │   │   │   ├── submissionApi.hur
 │   │   │   │   ├── submissionApi.hurl
@@ -83,6 +94,6 @@
 ├── structure.md
 └── vercel.json
 
-18 directories, 63 files
+20 directories, 72 files
 
 ```
