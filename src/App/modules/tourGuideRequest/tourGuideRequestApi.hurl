@@ -1,6 +1,5 @@
 # ✅ Get all tour guide requests
 GET http://localhost:5000/api/v1/tour-guide-requests
-Accept: application/json
 
 
 # ✅ Get single tour guide request
@@ -13,7 +12,7 @@ POST http://localhost:5000/api/v1/tour-guide-requests
 Content-Type: application/json
 
 {
-  "userId": "USER_OBJECT_ID",
+  "userId": "687ccd783d8c8c7d294a0fca",
   "title": "Experienced Mountain Guide",
   "reason": "I love guiding tourists and know every trail in the hills",
   "cvLink": "https://example.com/cv/john_doe.pdf",
@@ -31,6 +30,6 @@ Content-Type: application/json
 
 
 # ✅ Delete tour guide request
-DELETE http://localhost:5000/api/v1/tour-guide-requests/ID_HERE
+DELETE http://localhost:5000/api/v1/tour-guide-requests/687dd5aaf84d267585e5adc9
 Accept: application/json
 

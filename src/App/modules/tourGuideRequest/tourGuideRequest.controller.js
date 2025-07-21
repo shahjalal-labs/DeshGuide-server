@@ -25,7 +25,7 @@ const getAllRequests = async (req, res, next) => {
     sendResponse(res, {
       statusCode: 200,
       success: true,
-      message: "All requests fetched",
+      message: "All guides fetched",
       data: result,
     });
   } catch (err) {

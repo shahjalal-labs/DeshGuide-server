@@ -1,6 +1,12 @@
 import { TourGuideRequest } from "./tourGuideRequest.model.js";
 
 const createTourGuideRequest = async (data) => {
+  const existingGuide = await TourGuideRequest.findOne({
+    userId: data.userId,
+  });
+  if (existingGuide) {
+    throw new Error("User already exists");
+  }
   return await TourGuideRequest.create(data);
 };
 
@@ -21,7 +27,11 @@ const updateTourGuideRequestStatus = async (id, status) => {
 };
 
 const deleteTourGuideRequest = async (id) => {
-  return await TourGuideRequest.findByIdAndDelete(id);
+  const res = await TourGuideRequest.findByIdAndDelete(id);
+  if (!res) {
+    throw new Error("Guide not found");
+  }
+  return res;
 };
 
 export const TourGuideRequestServices = {
