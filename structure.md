@@ -57,6 +57,12 @@
 │   │   │   │   ├── submission.route.js
 │   │   │   │   ├── submission.service.js
 │   │   │   │   └── submission.validation.js
+│   │   │   ├── tourGuideRequest
+│   │   │   │   ├── tourGuideRequestApi.hurl
+│   │   │   │   ├── tourGuideRequest.controller.js
+│   │   │   │   ├── tourGuideRequest.model.js
+│   │   │   │   ├── tourGuideRequest.route.js
+│   │   │   │   └── tourGuideRequest.service.js
 │   │   │   └── users
 │   │   │       ├── refractorUsersPrompt.md
 │   │   │       ├── usersApi.hurl
@@ -75,6 +81,6 @@
 ├── structure.md
 └── vercel.json
 
-16 directories, 57 files
+17 directories, 62 files
 
 ```

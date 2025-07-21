@@ -9,4 +9,4 @@ router.get("/:id", TourGuideRequestControllers.getRequestById);
 router.patch("/:id", TourGuideRequestControllers.updateStatus);
 router.delete("/:id", TourGuideRequestControllers.deleteRequest);
 
-export default router;
+export const TourGuideRequestRoutes = router;

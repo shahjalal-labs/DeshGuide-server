@@ -11,6 +11,8 @@ import { UserRoutes } from "./App/modules/users/users.route.js";
 import { PackageRoutes } from "./App/modules/packages/packages.route.js";
 import { corsOptions } from "./App/config/corsOptions.js";
 import { BookingRoutes } from "./App/modules/bookings/bookings.route.js";
+import { TourGuideRequestRoutes } from "./App/modules/tourGuideRequest/tourGuideRequest.route.js";
+import { routes } from "./App/routes/routes.js";
 dotenv.config();
 
 const app = express();
@@ -24,6 +26,13 @@ app.use("/api/v1/users", UserRoutes);
 app.use("/api/v1/packages", PackageRoutes);
 app.use("/api/v1/bookings", BookingRoutes);
 app.use("/api/v1/tour-guide-requests", TourGuideRequestRoutes);
+
+routes.forEach({
+  path,
+  route,
+})=>{
+    app.use(path, route);
+  };
 
 app.get("/", (req, res) => {
   res.send("Assalamu alaikum, Welcome to the DeshGuide server !");
