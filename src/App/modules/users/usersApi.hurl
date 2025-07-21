@@ -4,7 +4,7 @@ GET https://deshguide-server.vercel.app/api/v1/users
 
 
 # ✅ Get single user by ID
-GET http://localhost:5000/api/v1/users/687ccd783d8c8c7d294a0fc9
+GET http://localhost:5000/api/v1/users/687e37ea0d85a52d76c2eb6c
 Accept: application/json
 
 
@@ -14,18 +14,18 @@ Content-Type: application/json
 
 {
   "name": "John Doe",
-  "email": "admin@example.com",
+  "email": "user2@example.com",
   "photoURL": "https://i.ibb.co/sample-image.png",
-  "role": "admin"  
+  "role": "tourist"  
 }
 
 
 # ✅ Update user by ID
-PATCH http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac1838
+PATCH http://localhost:5000/api/v1/users/687e37ea0d85a52d76c2eb6c
 Content-Type: application/json
 
 {
-  "name": "Updated User",
+  "name": "Updated User 2",
   "role": "tour-guide",
   "photoURL": "https://i.ibb.co/sample-image.png"
 }

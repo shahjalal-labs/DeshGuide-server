@@ -1,6 +1,15 @@
 import { Story } from "./stories.model.js";
+import { User } from "../users/users.model.js"; // ✅ Import user model
 
 const createStory = async (data) => {
+  const { userId } = data;
+
+  // ✅ Validate if userId exists
+  const user = await User.findById(userId);
+  if (!user) {
+    throw new Error("Invalid userId: No user found with this ID.");
+  }
+
   return await Story.create(data);
 };
 
