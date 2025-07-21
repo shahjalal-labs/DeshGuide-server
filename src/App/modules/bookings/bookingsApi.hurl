@@ -9,7 +9,7 @@ POST http://localhost:5000/api/v1/bookings
 Content-Type: application/json
 
 {
-  "packageId": "687ce1e14f0f363e8661d183",
+  "packageId": "687ce60e7511b3341ff488bf",
   "packageName": "Sajek Adventure",
   "touristId": "687ccd783d8c8c7d294a0fca",
   "touristName": "John Doe",
