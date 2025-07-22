@@ -12,7 +12,6 @@ Stores all users including tourists, guides, and admins.
 | ------------- | ------ | ------------------------------------------- |
 | name          | String | Full name                                   |
 | email         | String | Unique email                                |
-| password      | String | Hashed password                             |
 | photoURL      | String | Profile picture                             |
 | role          | String | User role: 'tourist', 'tour-guide', 'admin' |
 | last_loggedIn | Date   | Last login timestamp                        |

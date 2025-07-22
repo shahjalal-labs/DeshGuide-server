@@ -4,7 +4,7 @@ GET http://localhost:5000/api/v1/stories
 Accept: application/json
 
 # ✅ Get a single story by ID
-GET http://localhost:5000/api/v1/stories/64e4f4d61f8f4a9f3ddc9e17
+GET http://localhost:5000/api/v1/stories/687e5087bf17c8a9265b66d4
 Accept: application/json
 
 # ✅ Create a new story
@@ -24,6 +24,6 @@ Content-Type: application/json
 }
 
 # ✅ Delete a story
-DELETE http://localhost:5000/api/v1/stories/64e4f4d61f8f4a9f3ddc9e17
+DELETE http://localhost:5000/api/v1/stories/687e5087bf17c8a9265b66d4
 Accept: application/json
 
