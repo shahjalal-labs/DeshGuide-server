@@ -14,7 +14,11 @@ const getAllPackages = async () => {
 const getPackageById = async (id) => {
   return await Package.findById(id);
 };
-
+const getRandomPackages = async (size = 3) => {
+  // Use aggregation $sample
+  const samples = await Package.aggregate([{ $sample: { size } }]);
+  return samples;
+};
 const updatePackage = async (id, updatedData) => {
   return await Package.findByIdAndUpdate(id, updatedData, {
     new: true,
@@ -41,4 +45,5 @@ export const PackageServices = {
   getPackageById,
   updatePackage,
   deletePackage,
+  getRandomPackages,
 };

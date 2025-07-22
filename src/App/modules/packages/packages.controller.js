@@ -45,6 +45,22 @@ const getSinglePackage = async (req, res, next) => {
   }
 };
 
+const getRandomPackages = async (req, res, next) => {
+  try {
+    // allow client to override sample size via query ?size=5
+    const size = parseInt(req.query.size, 10) || 3;
+    const result = await PackageServices.getRandomPackages(size);
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: `${size} random packages`,
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 const updatePackage = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -81,4 +97,5 @@ export const PackageControllers = {
   getSinglePackage,
   updatePackage,
   deletePackage,
+  getRandomPackages,
 };

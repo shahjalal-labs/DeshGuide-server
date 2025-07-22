@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get("/", PackageControllers.getAllPackages);
 router.post("/", PackageControllers.createPackage);
+router.get("/random", PackageControllers.getRandomPackages);
 router.get("/:id", PackageControllers.getSinglePackage);
 router.patch("/:id", PackageControllers.updatePackage);
 router.delete("/:id", PackageControllers.deletePackage);

@@ -1,3 +1,6 @@
+# ✅ Get 3 random packages (default)
+GET http://localhost:5000/api/v1/packages/random
+Accept: application/json
 # ✅ Get all packages
 GET http://localhost:5000/api/v1/packages
 Accept: application/json
