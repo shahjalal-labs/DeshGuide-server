@@ -14,7 +14,7 @@ POST http://localhost:5000/api/v1/packages
 Content-Type: application/json
 
 {
-  "title": "Sajek Adventure",
+  "title": "Sajek Adventure 4",
   "description": "A trip to the scenic Sajek Valley",
   "price": 4500,
   "tripType": "Relaxation",
