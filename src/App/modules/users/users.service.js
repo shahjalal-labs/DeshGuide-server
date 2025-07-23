@@ -42,6 +42,16 @@ const getUserByIdFromDB = async (id) => {
   return res;
 };
 
+const getUserByEmailFromDB = async (email) => {
+  const res = await User.findOne({
+    email,
+  });
+  if (!res) {
+    throw new Error("User not found");
+  }
+  return res;
+};
+
 // ✅ Update User
 const updateUserInDB = async (id, updatedData) => {
   const updatedUser = await User.findByIdAndUpdate(id, updatedData, {
@@ -72,4 +82,5 @@ export const UserServices = {
   getUserByIdFromDB,
   updateUserInDB,
   deleteUserFromDB,
+  getUserByEmailFromDB,
 };

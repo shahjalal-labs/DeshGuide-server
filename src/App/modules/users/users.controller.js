@@ -50,6 +50,20 @@ const getSingleUser = async (req, res, next) => {
   }
 };
 
+// getUserByEmailFromDB;
+const getUserByEmail = async (req, res, next) => {
+  try {
+    const result = await UserServices.getUserByIdFromDB(req.params.email);
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "User retrieved successfully!",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 const updateUser = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -86,4 +100,5 @@ export const UserControllers = {
   getSingleUser,
   updateUser,
   deleteUser,
+  getUserByEmail,
 };
