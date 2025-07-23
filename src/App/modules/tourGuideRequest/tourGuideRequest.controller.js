@@ -51,10 +51,15 @@ const getRequestById = async (req, res, next) => {
 
 const getRandomAcceptedTourGuides = async (req, res, next) => {
   try {
-    const guides = await TourGuideRequestServices.getRandomAcceptedTourGuides();
+    const { limit } = req.query; // get from URL like ?limit=3 or ?limit=all
+
+    const guides = await TourGuideRequestServices.getRandomAcceptedTourGuides(
+      limit === "all" ? "all" : Number(limit) || 6, // default to 6 if invalid
+    );
+
     res.status(200).json({
       success: true,
-      message: "3 random accepted tour guides",
+      message: `${limit || 6} accepted tour guides`,
       data: guides,
     });
   } catch (error) {
