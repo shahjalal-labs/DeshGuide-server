@@ -42,11 +42,15 @@ const deleteTourGuideRequest = async (id) => {
   return res;
 };
 
-// ✅ NEW: Get 3 random accepted tour guides
-const getRandomAcceptedTourGuides = async () => {
-  return await TourGuideRequest.aggregate([
-    { $match: { status: "accepted" } },
-    { $sample: { size: 6 } },
+//  NEW: Get 3 random accepted tour guides and all accepted tour guides
+const getRandomAcceptedTourGuides = async (limit = 6) => {
+  const pipeline = [{ $match: { status: "accepted" } }];
+
+  if (limit !== "all") {
+    pipeline.push({ $sample: { size: Number(limit) } });
+  }
+
+  pipeline.push(
     {
       $lookup: {
         from: "users",
@@ -69,9 +73,10 @@ const getRandomAcceptedTourGuides = async () => {
         "user.photo": 1,
       },
     },
-  ]);
-};
+  );
 
+  return await TourGuideRequest.aggregate(pipeline);
+};
 export const TourGuideRequestServices = {
   createTourGuideRequest,
   getAllTourGuideRequests,
