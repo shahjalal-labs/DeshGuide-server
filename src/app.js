@@ -15,7 +15,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
-// dynamic route mounting
 routes.forEach(({ path, route }) => {
   app.use(`/api/v1${path}`, route);
 });

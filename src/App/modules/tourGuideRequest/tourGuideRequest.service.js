@@ -19,7 +19,7 @@ const getAllTourGuideRequests = async () => {
 };
 
 const getTourGuideRequestById = async (id) => {
-  return await TourGuideRequest.findById(id).populate("userId", "name email");
+  return await TourGuideRequest.findById(id).populate("userId");
 };
 
 const updateTourGuideRequestStatus = async (id, status) => {

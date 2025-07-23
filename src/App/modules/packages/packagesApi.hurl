@@ -6,7 +6,7 @@ GET http://localhost:5000/api/v1/packages
 Accept: application/json
 
 # ✅ Get single package
-GET http://localhost:5000/api/v1/packages/687ce1e14f0f363e8661d183
+GET http://localhost:5000/api/v1/packages/687f5b17ec95de7ba201f143
 Accept: application/json
 
 # ✅ Create new package

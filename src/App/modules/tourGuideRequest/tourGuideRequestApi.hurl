@@ -3,12 +3,15 @@ GET http://localhost:5000/api/v1/tour-guide-requests
 
 
 # ✅ Get single tour guide request
-GET http://localhost:5000/api/v1/tour-guide-requests/ID_HERE
+GET http://localhost:5000/api/v1/tour-guide-requests/687dd50b1ff686fc8ebc3cae
 Accept: application/json
 
 
 GET http://localhost:5000/api/v1/tour-guide-requests/random-accepted
-Content-Type: application/json
+## get all accepted tour guides
+GET http://localhost:5000/api/v1/tour-guide-requests/random-accepted?limit=all
+
+
 
 
 
