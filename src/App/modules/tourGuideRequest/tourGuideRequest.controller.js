@@ -49,6 +49,19 @@ const getRequestById = async (req, res, next) => {
   }
 };
 
+const getRandomAcceptedTourGuides = async (req, res, next) => {
+  try {
+    const guides = await TourGuideRequestServices.getRandomAcceptedTourGuides();
+    res.status(200).json({
+      success: true,
+      message: "3 random accepted tour guides",
+      data: guides,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const updateStatus = async (req, res, next) => {
   try {
     const result = await TourGuideRequestServices.updateTourGuideRequestStatus(
@@ -88,4 +101,5 @@ export const TourGuideRequestControllers = {
   getRequestById,
   updateStatus,
   deleteRequest,
+  getRandomAcceptedTourGuides,
 };

@@ -7,6 +7,11 @@ GET http://localhost:5000/api/v1/tour-guide-requests/ID_HERE
 Accept: application/json
 
 
+GET http://localhost:5000/api/v1/tour-guide-requests/random-accepted
+Content-Type: application/json
+
+
+
 # ✅ Create new tour guide request
 POST http://localhost:5000/api/v1/tour-guide-requests
 Content-Type: application/json
@@ -21,7 +26,7 @@ Content-Type: application/json
 
 
 # ✅ Update request status (e.g., accept or reject)
-PATCH http://localhost:5000/api/v1/tour-guide-requests/687dd50b1ff686fc8ebc3cae
+PATCH http://localhost:5000/api/v1/tour-guide-requests/687dde3e2ab02739ea3e4302
 Content-Type: application/json
 
 {

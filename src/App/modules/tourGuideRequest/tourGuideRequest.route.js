@@ -5,6 +5,10 @@ const router = express.Router();
 
 router.post("/", TourGuideRequestControllers.createRequest);
 router.get("/", TourGuideRequestControllers.getAllRequests);
+router.get(
+  "/random-accepted",
+  TourGuideRequestControllers.getRandomAcceptedTourGuides,
+);
 router.get("/:id", TourGuideRequestControllers.getRequestById);
 router.patch("/:id", TourGuideRequestControllers.updateStatus);
 router.delete("/:id", TourGuideRequestControllers.deleteRequest);
