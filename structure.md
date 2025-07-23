@@ -10,6 +10,7 @@
 │   ├── deployment.md
 │   ├── refractorDocsPrompt.md
 │   └── Requirement.md
+├── hurlNvimShowcase.mp4
 ├── package.json
 ├── README.md
 ├── src
@@ -48,7 +49,8 @@
 │   │   │   │   ├── packagesApi.hurl
 │   │   │   │   ├── packages.controller.js
 │   │   │   │   ├── packages.route.js
-│   │   │   │   └── packages.service.js
+│   │   │   │   ├── packages.service.js
+│   │   │   │   └── refractorPackagesPrompt.md
 │   │   │   ├── payments
 │   │   │   │   ├── paymentsApi.hurl
 │   │   │   │   ├── payments.controller.js
@@ -56,6 +58,7 @@
 │   │   │   │   ├── payments.route.js
 │   │   │   │   └── payments.service.js
 │   │   │   ├── stories
+│   │   │   │   ├── storiesApi.hurl
 │   │   │   │   ├── stories.controller.js
 │   │   │   │   ├── stories.model.js
 │   │   │   │   ├── stories.route.js
@@ -94,6 +97,6 @@
 ├── structure.md
 └── vercel.json
 
-20 directories, 72 files
+20 directories, 75 files
 
 ```

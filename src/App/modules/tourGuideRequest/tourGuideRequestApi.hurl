@@ -17,7 +17,7 @@ POST http://localhost:5000/api/v1/tour-guide-requests
 Content-Type: application/json
 
 {
-  "userId": "687cff8d095a1d459861b897",
+  "userId": "688036ca4582db5aafd12e4c",
   "title": "Experienced Mountain Guide",
   "reason": "I love guiding tourists and know every trail in the hills",
   "cvLink": "https://example.com/cv/john_doe.pdf",
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 
 # ✅ Update request status (e.g., accept or reject)
-PATCH http://localhost:5000/api/v1/tour-guide-requests/687dde3e2ab02739ea3e4302
+PATCH http://localhost:5000/api/v1/tour-guide-requests/6880374f4582db5aafd12e5a
 Content-Type: application/json
 
 {

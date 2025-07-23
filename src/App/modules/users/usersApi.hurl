@@ -13,8 +13,8 @@ POST http://localhost:5000/api/v1/users
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "user2@example.com",
+  "name": "Tourist 5",
+  "email": "tourist5@example.com",
   "photoURL": "https://i.ibb.co/sample-image.png",
   "role": "tourist"  
 }

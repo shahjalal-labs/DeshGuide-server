@@ -46,7 +46,7 @@ const deleteTourGuideRequest = async (id) => {
 const getRandomAcceptedTourGuides = async () => {
   return await TourGuideRequest.aggregate([
     { $match: { status: "accepted" } },
-    { $sample: { size: 3 } },
+    { $sample: { size: 6 } },
     {
       $lookup: {
         from: "users",
