@@ -9,6 +9,13 @@ GET http://localhost:5000/api/v1/payments/687e2cf7cbfa711f312c2f03
 Accept: application/json
 
 ###
+# ✅ Create Stripe Payment Intent
+POST http://localhost:5000/api/v1/payments/create-payment-intent
+Content-Type: application/json
+
+{
+  "amountInCents": 5000
+}
 
 # ✅ Create new payment
 POST http://localhost:5000/api/v1/payments
