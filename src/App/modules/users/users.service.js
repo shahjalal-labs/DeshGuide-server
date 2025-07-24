@@ -25,7 +25,7 @@ const createUserIntoDB = async (data) => {
   };
 };
 
-const getTourGuides = async () => {
+const getAllTourGuidesFromDB = async () => {
   const guides = await User.find({ role: "tour-guide" }).sort({
     createdAt: -1,
   });
@@ -94,5 +94,5 @@ export const UserServices = {
   updateUserInDB,
   deleteUserFromDB,
   getUserByEmailFromDB,
-  getTourGuides,
+  getAllTourGuidesFromDB,
 };

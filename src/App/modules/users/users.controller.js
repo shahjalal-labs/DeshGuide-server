@@ -94,6 +94,19 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
+const getAllTourGuides = async (req, res, next) => {
+  try {
+    const result = await UserServices.getTourGuides();
+    res.status(200).json({
+      success: true,
+      message: "Tour guides fetched successfully",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const UserControllers = {
   createUser,
   getAllUsers,
@@ -101,4 +114,5 @@ export const UserControllers = {
   updateUser,
   deleteUser,
   getUserByEmail,
+  getAllTourGuides,
 };

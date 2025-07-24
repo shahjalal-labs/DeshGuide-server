@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get("/", UserControllers.getAllUsers);
 router.get("/", UserControllers.getAllUsers);
+router.get("/tour-guides", UserControllers.getAllTourGuides);
 router.get("/email/:email", UserControllers.getUserByEmail);
 router.get("/:id", UserControllers.getSingleUser);
 router.patch("/:id", UserControllers.updateUser);
