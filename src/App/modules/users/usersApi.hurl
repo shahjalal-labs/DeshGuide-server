@@ -2,13 +2,15 @@
 # ✅ Get all users
 GET https://deshguide-server.vercel.app/api/v1/users
 
+# load tour guides from users 
+GET http://localhost:5000/api/v1/users/tour-guides
 
 # ✅ Get single user by ID
 GET http://localhost:5000/api/v1/users/687e37ea0d85a52d76c2eb6c
 Accept: application/json
 
 # ✅ Get single user by email
-GET http://localhost:5000/api/v1/users/email/tourist5@example.com
+GET http://localhost:5000/api/v1/users/email/tourist4@example.com
 
 # ✅ Create new user
 POST http://localhost:5000/api/v1/users
