@@ -53,7 +53,7 @@ const getSingleUser = async (req, res, next) => {
 // getUserByEmailFromDB;
 const getUserByEmail = async (req, res, next) => {
   try {
-    const result = await UserServices.getUserByIdFromDB(req.params.email);
+    const result = await UserServices.getUserByEmailFromDB(req.params.email);
     sendResponse(res, {
       statusCode: 200,
       success: true,

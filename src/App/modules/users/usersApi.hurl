@@ -7,7 +7,8 @@ GET https://deshguide-server.vercel.app/api/v1/users
 GET http://localhost:5000/api/v1/users/687e37ea0d85a52d76c2eb6c
 Accept: application/json
 
-GET http://localhost:5000/api/v1/users/tourist5@example.com
+# ✅ Get single user by email
+GET http://localhost:5000/api/v1/users/email/tourist5@example.com
 
 # ✅ Create new user
 POST http://localhost:5000/api/v1/users

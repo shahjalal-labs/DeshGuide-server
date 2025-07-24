@@ -24,7 +24,18 @@ const createUserIntoDB = async (data) => {
     alreadyExisted: false,
   };
 };
-// ✅ Get All Users
+
+const getTourGuides = async () => {
+  const guides = await User.find({ role: "tour-guide" }).sort({
+    createdAt: -1,
+  });
+
+  if (!guides || guides.length === 0) {
+    throw new Error("No tour guides found");
+  }
+
+  return guides;
+}; // ✅ Get All Users
 const getAllUsersFromDB = async () => {
   const res = await User.find().sort({ createdAt: -1 });
   if (!res) {
@@ -83,4 +94,5 @@ export const UserServices = {
   updateUserInDB,
   deleteUserFromDB,
   getUserByEmailFromDB,
+  getTourGuides,
 };

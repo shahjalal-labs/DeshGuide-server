@@ -2,7 +2,8 @@
 
 ## 📽️ Requirement Explanation Video
 
-[📺 Watch the Explanation Video](https://drive.google.com/file/d/14qDDk_X7epplTmbyCc4nIV2RVYSzn46H/view)
+[📺 Watch the Explanation Video](https://drive.google.com/file/d/14qDDk_X7epplTmbyCc4nIV2RVYSzn46H/view) <br />
+[assignment12_category_003](https://docs.google.com/document/d/1YPsSMpi7LdVZrunRImvGrhZbwV0QK6TwGi4V6T2L6eY/edit?tab=t.0#heading=h.g0wknetbxo3t)
 
 ---
 
