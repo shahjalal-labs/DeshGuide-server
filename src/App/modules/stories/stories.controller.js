@@ -29,6 +29,20 @@ const getAllStories = async (req, res, next) => {
   }
 };
 
+const getStoriesByUserId = async (req, res, next) => {
+  try {
+    const result = await StoryService.getStoriesByUserId(req.params.userId);
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Stories by user retrieved successfully!",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 const getSingleStory = async (req, res, next) => {
   try {
     const result = await StoryService.getStoryById(req.params.id);
@@ -62,4 +76,5 @@ export const StoryController = {
   getAllStories,
   getSingleStory,
   deleteStory,
+  getStoriesByUserId,
 };

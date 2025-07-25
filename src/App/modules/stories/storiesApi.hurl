@@ -3,6 +3,12 @@
 GET http://localhost:5000/api/v1/stories
 Accept: application/json
 
+
+# ✅ Get all stories by userId
+GET http://localhost:5000/api/v1/stories/user/688036d54582db5aafd12e4f
+Accept: application/json
+
+
 # ✅ Get a single story by ID
 GET http://localhost:5000/api/v1/stories/687e509abf17c8a9265b66dd
 Accept: application/json
@@ -12,13 +18,13 @@ POST http://localhost:5000/api/v1/stories
 Content-Type: application/json
 
 {
-  "title": "Sunset at Saint Martin",
+  "title": "Rangamati",
   "description": "Witnessed the most beautiful sunset ever!",
   "images": [
     "https://img.url/sunset1.jpg",
     "https://img.url/sunset2.jpg"
   ],
-  "userId": "687e37ea0d85a52d76c2eb6c",
+  "userId": "688036d54582db5aafd12e4f",
   "userName": "Jalal Uddin",
   "userPhoto": "https://img.url/profile.jpg"
 }

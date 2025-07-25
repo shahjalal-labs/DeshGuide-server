@@ -17,6 +17,10 @@ const getAllStories = async () => {
   return await Story.find().sort({ createdAt: -1 });
 };
 
+const getStoriesByUserId = async (userId) => {
+  return await Story.find({ userId }).sort({ createdAt: -1 });
+};
+
 const getStoryById = async (id) => {
   const story = await Story.findById(id);
   if (!story) {
@@ -44,4 +48,5 @@ export const StoryService = {
   getAllStories,
   getStoryById,
   deleteStory,
+  getStoriesByUserId,
 };
