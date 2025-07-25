@@ -14,24 +14,26 @@ GET http://localhost:5000/api/v1/stories/687e509abf17c8a9265b66dd
 Accept: application/json
 
 
+#------UPDATE STORY BY _ID---------------
 PATCH http://localhost:5000/api/v1/stories/687e509abf17c8a9265b66dd
 Content-Type: application/json
 
 {
-  "title": "Updated Sunset Title",
+  "title": "Updated Sunset Title updated",
+  "userName": "Hacker",
   "description": "New description for this beautiful sunset",
   "images": [
     "https://img.url/sunset3.jpg"
   ]
 }
+#------UPDATE STORY BY _ID --------
 
-HTTP/1.1 200
 
 POST http://localhost:5000/api/v1/stories
 Content-Type: application/json
 
 {
-  "title": "Bird Watching at Tanguar Haor",
+  "title": "Bird Watching at Tanguar Haor ",
   "description": "The wetlands came alive with hundreds of migratory birds flying in sync. I spent hours watching them dive and glide across the water. The sound of flapping wings and nature’s stillness was unforgettable.",
   "images": [
     "https://img.url/tanguar1.jpg",
