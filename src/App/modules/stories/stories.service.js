@@ -43,10 +43,20 @@ const deleteStory = async (id) => {
   return deleted;
 };
 
+const updateStoryByIdService = async (id, payload) => {
+  const updated = await Story.findByIdAndUpdate(id, payload, {
+    new: true,
+    runValidators: true,
+  });
+
+  return updated;
+};
+
 export const StoryService = {
   createStory,
   getAllStories,
   getStoryById,
   deleteStory,
   getStoriesByUserId,
+  updateStoryByIdService,
 };

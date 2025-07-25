@@ -14,6 +14,18 @@ GET http://localhost:5000/api/v1/stories/687e509abf17c8a9265b66dd
 Accept: application/json
 
 
+PATCH http://localhost:5000/api/v1/stories/687e509abf17c8a9265b66dd
+Content-Type: application/json
+
+{
+  "title": "Updated Sunset Title",
+  "description": "New description for this beautiful sunset",
+  "images": [
+    "https://img.url/sunset3.jpg"
+  ]
+}
+
+HTTP/1.1 200
 
 POST http://localhost:5000/api/v1/stories
 Content-Type: application/json

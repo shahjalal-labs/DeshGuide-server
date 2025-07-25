@@ -70,11 +70,32 @@ const deleteStory = async (req, res, next) => {
     next(err);
   }
 };
+const updateStoryById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const updated = await StoryService.updateStoryByIdService(id, req.body);
 
+    if (!updated) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Story not found" });
+    }
+
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Story updated successfully",
+      data: updated,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 export const StoryController = {
   createStory,
   getAllStories,
   getSingleStory,
   deleteStory,
   getStoriesByUserId,
+  updateStoryById,
 };
