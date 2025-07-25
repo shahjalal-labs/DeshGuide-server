@@ -44,6 +44,11 @@ const deleteStory = async (id) => {
 };
 
 const updateStoryByIdService = async (id, payload) => {
+  //  Prevent these fields from being updated
+  delete payload.userId;
+  delete payload.userName;
+  delete payload.userPhoto;
+
   const updated = await Story.findByIdAndUpdate(id, payload, {
     new: true,
     runValidators: true,
@@ -51,7 +56,6 @@ const updateStoryByIdService = async (id, payload) => {
 
   return updated;
 };
-
 export const StoryService = {
   createStory,
   getAllStories,
