@@ -4,7 +4,7 @@ GET http://localhost:5000/api/v1/stories
 Accept: application/json
 
 # ✅ Get a single story by ID
-GET http://localhost:5000/api/v1/stories/687e5087bf17c8a9265b66d4
+GET http://localhost:5000/api/v1/stories/687e509abf17c8a9265b66dd
 Accept: application/json
 
 # ✅ Create a new story

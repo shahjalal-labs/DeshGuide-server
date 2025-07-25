@@ -1,8 +1,10 @@
 # ✅ Get all bookings
+
+
 GET http://localhost:5000/api/v1/bookings
 
 # ✅ Get single booking
-GET http://localhost:5000/api/v1/bookings/687d8734385d0ad42e797a1d
+GET http://localhost:5000/api/v1/bookings/687d9855289cd4c61c2b0c9a
 
 # ✅ Create new booking
 POST http://localhost:5000/api/v1/bookings
