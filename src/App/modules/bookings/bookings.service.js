@@ -66,36 +66,27 @@ const getBookingsByTourist = async (touristId) => {
 };
 
 // Get bookings by guideId (for guides)
-/* const getBookingsByGuide = async (guideId) => {
+const getBookingsByGuide = async (guideId) => {
   const result = await Booking.find({ guideId }).populate(
     "packageId touristId",
   );
   return result;
 };
- */
 
-const getBookingsByGuide = async (guideId) => {
-  const result = await Booking.find({
-    guideId,
-    paymentStatus: "paid",
-  })
+/*const getBookingsByGuide = async (guideId) => {
+  const bookings = await Booking.find({ guideId, paymentStatus: "paid" })
     .populate("packageId touristId")
     .lean();
 
-  // Custom sort: in-review → accepted → others
-  const statusPriority = {
-    "in-review": 0,
-    accepted: 1,
-  };
+  return bookings.sort((a, b) => {
+    // Prioritize "in-review"
+    if (a.status === "in-review" && b.status !== "in-review") return -1;
+    if (a.status !== "in-review" && b.status === "in-review") return 1;
 
-  return result.sort((a, b) => {
-    const priorityA = statusPriority[a.status] ?? 2;
-    const priorityB = statusPriority[b.status] ?? 2;
-    return (
-      priorityA - priorityB || new Date(b.createdAt) - new Date(a.createdAt)
-    );
+    // If both are same status (including "in-review"), sort by date (newest first)
+    return new Date(b.createdAt) - new Date(a.createdAt);
   });
-};
+};*/
 
 export const BookingServices = {
   createBooking,

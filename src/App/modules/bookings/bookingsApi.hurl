@@ -27,7 +27,7 @@ Content-Type: application/json
 }
 
 # ✅ Update booking (e.g., mark as accepted or paid)
-PATCH http://localhost:5000/api/v1/bookings/6881ade7f0fd0810447cfb5d
+PATCH http://localhost:5000/api/v1/bookings/687d9855289cd4c61c2b0c9a
 Content-Type: application/json
 
 {
