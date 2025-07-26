@@ -168,9 +168,29 @@ const createUser = async (req, res, next) => {
   }
 };
 
-const getAllUsers = async (req, res, next) => {
+/* const getAllUsers = async (req, res, next) => {
   try {
     const result = await UserServices.getAllUsersFromDB();
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Users retrieved successfully!",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+ */
+
+const getAllUsers = async (req, res, next) => {
+  try {
+    const filters = {
+      searchTerm: req.query.search || "", // ?search=tour
+      role: req.query.role || "", // ?role=tour-guide
+    };
+
+    const result = await UserServices.getAllUsersFromDB(filters);
     sendResponse(res, {
       statusCode: 200,
       success: true,
@@ -364,13 +384,36 @@ const getAllTourGuidesFromDB = async () => {
   }
 
   return guides;
-}; // ✅ Get All Users
-const getAllUsersFromDB = async () => {
+};
+// ✅ Get All Users
+/* const getAllUsersFromDB = async () => {
   const res = await User.find().sort({ createdAt: -1 });
   if (!res) {
     throw new Error("User not found");
   }
   return res;
+}; */
+
+const getAllUsersFromDB = async (filters = {}) => {
+  const { searchTerm, role } = filters;
+
+  const query = {};
+
+  if (searchTerm) {
+    query.$or = [
+      { name: { $regex: searchTerm, $options: "i" } },
+      { email: { $regex: searchTerm, $options: "i" } },
+    ];
+  }
+
+  if (role) {
+    query.role = role;
+  }
+
+  const users = await User.find(query).sort({ createdAt: -1 });
+
+  if (!users) throw new Error("Users not found");
+  return users;
 };
 
 // ✅ Get Single User by ID
@@ -429,9 +472,18 @@ export const UserServices = {
 
 ### `usersApi.hurl`
 ```hurl
-687cc5b9feaf9ecda8ac1848
-# ✅ Get all users
-GET https://deshguide-server.vercel.app/api/v1/users
+# Get all users (no filter)
+GET http://localhost:5000/api/v1/users
+
+# Search users by name or email
+GET http://localhost:5000/api/v1/users?search=tour
+
+# Filter users by role
+GET http://localhost:5000/api/v1/users?role=tour-guide
+
+# Combine both
+GET http://localhost:5000/api/v1/users?search=tour&role=tour-guide
+
 
 # load tour guides from users 
 GET http://localhost:5000/api/v1/users/tour-guides
@@ -468,6 +520,8 @@ Content-Type: application/json
 
 # ✅ Delete user by ID
 DELETE http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac184a
+
+
 
 
 ```
