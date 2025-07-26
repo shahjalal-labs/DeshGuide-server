@@ -64,7 +64,11 @@
     "tripType": "Adventure",
     "days": 3,
     "location": "Saint Martin's Island",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/3be7075b97b143d19ca910a9c7621cac/aerial-view-of-saint-martins-turquoise-coast-with-cor.jpg",
+      "https://images.deepai.org/art-image/063b33d8fb6f429191d93a7ec99546da/snorkeling-person-near-chera-dwip-with-coral-and-fish.jpg",
+      "https://images.deepai.org/art-image/f9d5f96b6548451bbb1721d48464d2f3/bangladeshi-male-night-beach-bonfire-with-tourists-si.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -78,11 +82,6 @@
         "day": 3,
         "activities": "Sunrise walk, seafood breakfast, return to mainland"
       }
-    ],
-    "imagePrompts": [
-      "Aerial view of Saint Martin’s turquoise coast with coral visible through water",
-      "Snorkeling person near Chera Dwip with coral and fish below in crystal water",
-      "Night beach bonfire with tourists sitting around on the sand under stars"
     ]
   },
   {
@@ -92,7 +91,11 @@
     "tripType": "Adventure",
     "days": 5,
     "location": "Bandarban",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/83ea73b1eb8f4247bf48c7705aeb4887/hilltop-view-from-nilgiri-in-early-morning-fog-with-g.jpg",
+      "https://images.deepai.org/art-image/0a059bc079e049899859428e7be0688a/tourists-hiking-to-nafakhum-waterfall-through-forest-.jpg",
+      "https://images.deepai.org/art-image/d8364193a6364316965549baada5b85e/tribal-woman-selling-fruits-in-bandarban-street-marke.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -114,11 +117,6 @@
         "day": 5,
         "activities": "Morning rest and departure"
       }
-    ],
-    "imagePrompts": [
-      "Hilltop view from Nilgiri in early morning fog with green slopes and wooden huts",
-      "Tourists hiking to Nafakhum waterfall through forest and shallow river",
-      "Tribal woman selling fruits in Bandarban street market with hills in background"
     ]
   },
   {
@@ -128,7 +126,11 @@
     "tripType": "Nature",
     "days": 3,
     "location": "Sylhet",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/1ff26b4cc5a44188b52df8d4fd35ee24/old-man-picking-tea-leaves-in-sylhet-tea-garden-with-.jpg",
+      "https://images.deepai.org/art-image/1d9c99fa1f3c43458eb037c1c62491f4/wooden-boat-floating-through-ratargul-swamp-forest-wi.jpg",
+      "https://images.deepai.org/art-image/3f544dbb109e4e438d200e4a03246c3b/madhabkunda-waterfall-falling-over-red-rocks-tourists.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -142,11 +144,6 @@
         "day": 3,
         "activities": "Visit Madhabkunda waterfall, return journey"
       }
-    ],
-    "imagePrompts": [
-      "Women picking tea leaves in Sylhet tea garden with rolling green hills behind",
-      "Wooden boat floating through Ratargul swamp forest with reflections in water",
-      "Madhabkunda waterfall falling over red rocks, tourists standing nearby"
     ]
   },
   {
