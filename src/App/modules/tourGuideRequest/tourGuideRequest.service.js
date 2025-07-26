@@ -6,7 +6,8 @@ const createTourGuideRequest = async (data) => {
   if (!existUser) throw new Error("User not found");
 
   const existingGuide = await TourGuideRequest.findOne({ userId: data.userId });
-  if (existingGuide) throw new Error("Tour guide already exists");
+  if (existingGuide)
+    throw new Error("You already Applied or you already a tour guide ");
 
   return await TourGuideRequest.create(data);
 };
@@ -47,9 +48,10 @@ const getTourGuideRequestById = async (id) => {
 }; */
 
 const updateTourGuideRequestStatus = async (id, status) => {
+  console.log(id, status, " id status tourGuideRequest.service.js", 51);
   const res = await TourGuideRequest.findByIdAndUpdate(
     id,
-    { status },
+    { status: status },
     { new: true },
   );
 

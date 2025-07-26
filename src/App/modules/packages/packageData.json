@@ -33,7 +33,11 @@
     "tripType": "Nature",
     "days": 4,
     "location": "Sundarbans",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/18013ccde158403e97b2804d68101e57/traditional-launch-boat-in-sundarbans-mangrove-river-.jpg",
+      "https://images.deepai.org/art-image/0271952765ce412b878981dbdb957347/royal-bengal-tiger-mid-step-among-trees-in-sundarbans.jpg",
+      "https://images.deepai.org/art-image/edb1fdbc627d46b692194673642c8cd8/fishing-village-huts-on-stilts-beside-muddy-river-in-.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -51,11 +55,6 @@
         "day": 4,
         "activities": "Return from cruise and transfer to Khulna city"
       }
-    ],
-    "imagePrompts": [
-      "Traditional launch boat in Sundarbans mangrove river, surrounded by dense trees and fog",
-      "Royal Bengal tiger mid-step among trees in Sundarbans, golden morning light",
-      "Fishing village huts on stilts beside muddy river in Sundarbans, cloudy sky above"
     ]
   },
   {
