@@ -14,18 +14,32 @@ POST http://localhost:5000/api/v1/packages
 Content-Type: application/json
 
 {
-  "title": "Sajek Adventure 4",
-  "description": "A trip to the scenic Sajek Valley",
-  "price": 4500,
-  "tripType": "Relaxation",
-  "days": 3,
-  "location": "Sajek",
-  "gallery": ["https://img.url/1.jpg", "https://img.url/2.jpg"],
-  "tourPlan": [
-    { "day": 1, "activities": "Depart from Dhaka, arrive at Sajek" },
-    { "day": 2, "activities": "Explore hill tracks and tribal villages" }
-  ]
-}
+    "title": "Cox's Bazar Beach Escape",
+    "description": "Enjoy the world’s longest sea beach, local seafood, and calm sunsets at Cox’s Bazar. Ideal for couples, families, or solo travelers.",
+    "price": 5500,
+    "tripType": "Relaxation",
+    "days": 3,
+    "location": "Cox's Bazar",
+    "gallery": [
+      "https://images.deepai.org/art-image/72bca9114b0941e89cdb0ea0a22f5553/cox-s-bazar-sea-beach-during-sunset-with-silhouettes-.jpg",
+      "https://api.deepai.org/job-view-file/d46572d0-47a7-41cc-8eae-d7bac1a7e0a6/outputs/output.jpg",
+      "https://api.deepai.org/job-view-file/21cbe50a-3fd5-40b2-b412-de7076ace8c9/outputs/output.jpg"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Departure from Dhaka, check-in at sea view hotel, evening walk by the beach"
+      },
+      {
+        "day": 2,
+        "activities": "Visit Himchari, Inani Beach, and enjoy local seafood lunch"
+      },
+      {
+        "day": 3,
+        "activities": "Shopping from Burmese market and return journey"
+      }
+    ]
+  }
 
 # ✅ Update package
 PATCH http://localhost:5000/api/v1/packages/687ce1e14f0f363e8661d183
