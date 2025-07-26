@@ -153,7 +153,11 @@
     "tripType": "Cultural",
     "days": 3,
     "location": "Rangamati",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/df7b829ba073449689ebdba4fbee9a77/wooden-boat-crossing-kaptai-lake-with-green-hills-and.jpg",
+      "https://images.deepai.org/art-image/3f544dbb109e4e438d200e4a03246c3b/madhabkunda-waterfall-falling-over-red-rocks-tourists.jpg",
+      "https://images.deepai.org/art-image/668a4269696b40619a05863e3f50ef02/tribal-woman-selling-fruits-in-bandarban-street-marke.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -169,8 +173,6 @@
       }
     ],
     "imagePrompts": [
-      "Wooden boat crossing Kaptai Lake with green hills and tribal villages in background",
-      "Traditional Chakma house with wood carvings and tribal flags in Rangamati",
       "Sunset view over Kaptai Lake with orange reflections on calm water"
     ]
   },
@@ -181,7 +183,11 @@
     "tripType": "Nature",
     "days": 2,
     "location": "Srimangal",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/1ff26b4cc5a44188b52df8d4fd35ee24/old-man-picking-tea-leaves-in-sylhet-tea-garden-with-.jpg",
+      "https://images.deepai.org/art-image/83ea73b1eb8f4247bf48c7705aeb4887/hilltop-view-from-nilgiri-in-early-morning-fog-with-g.jpg",
+      "https://deepai.org/static/images/new_heart.png"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -191,11 +197,6 @@
         "day": 2,
         "activities": "Taste 7-layer tea, explore tea estates, return home"
       }
-    ],
-    "imagePrompts": [
-      "Rainforest trail in Lawachara with mist, tall trees and sunlight rays",
-      "Cup of 7-layer tea in glass, colorful layers visible with green background",
-      "Local tribal home with bamboo structure, child sitting on veranda"
     ]
   },
   {
