@@ -27,21 +27,21 @@ Content-Type: application/json
 }
 
 # ✅ Update booking (e.g., mark as accepted or paid)
-PATCH http://localhost:5000/api/v1/bookings/687d87c8385d0ad42e797a29
+PATCH http://localhost:5000/api/v1/bookings/6881ade7f0fd0810447cfb5d
 Content-Type: application/json
 
 {
-  "status": "accepted",
+  "status": "in-review",
   "paymentStatus": "paid"
 }
 
 # ✅ Delete booking
 DELETE http://localhost:5000/api/v1/bookings/687d87c1385d0ad42e797a27
 
-# ✅ Get bookings by tourist
+# ✅ Get bookings of  a  tourist by  id
 GET http://localhost:5000/api/v1/bookings/tourist/688036d54582db5aafd12e4f
 
-# ✅ Get bookings by guide
+# ✅ Get bookings of a specific guide by id
 GET http://localhost:5000/api/v1/bookings/guide/687cff8d095a1d459861b897
 Accept: application/json
 
