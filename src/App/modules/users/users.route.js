@@ -4,7 +4,7 @@ import { UserControllers } from "./users.controller.js";
 
 const router = express.Router();
 
-router.get("/", UserControllers.getAllUsers);
+router.post("/", UserControllers.createUser);
 router.get("/", UserControllers.getAllUsers);
 router.get("/tour-guides", UserControllers.getAllTourGuides);
 router.get("/email/:email", UserControllers.getUserByEmail);
