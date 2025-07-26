@@ -1,6 +1,15 @@
-687cc5b9feaf9ecda8ac1848
-# ✅ Get all users
-GET https://deshguide-server.vercel.app/api/v1/users
+# Get all users (no filter)
+GET http://localhost:5000/api/v1/users
+
+# Search users by name or email
+GET http://localhost:5000/api/v1/users?search=tour
+
+# Filter users by role
+GET http://localhost:5000/api/v1/users?role=tour-guide
+
+# Combine both
+GET http://localhost:5000/api/v1/users?search=tour&role=tour-guide
+
 
 # load tour guides from users 
 GET http://localhost:5000/api/v1/users/tour-guides
@@ -37,5 +46,7 @@ Content-Type: application/json
 
 # ✅ Delete user by ID
 DELETE http://localhost:5000/api/v1/users/687cc5b9feaf9ecda8ac184a
+
+
 
 
