@@ -22,7 +22,7 @@ const getTourGuideRequestById = async (id) => {
   return await TourGuideRequest.findById(id).populate("userId");
 };
 
-const updateTourGuideRequestStatus = async (id, status) => {
+/* const updateTourGuideRequestStatus = async (id, status) => {
   const res = await TourGuideRequest.findByIdAndUpdate(
     id,
     { status },
@@ -36,6 +36,32 @@ const updateTourGuideRequestStatus = async (id, status) => {
       { role: "tour-guide" },
       { new: true },
     );
+    console.log(
+      userRoleChanged,
+      "user role changed tourGuideRequest.service.js",
+      35,
+    );
+  }
+
+  return res;
+}; */
+
+const updateTourGuideRequestStatus = async (id, status) => {
+  const res = await TourGuideRequest.findByIdAndUpdate(
+    id,
+    { status },
+    { new: true },
+  );
+
+  console.log(res, "tourGuideRequest.service.js", 27);
+
+  if (res?.status === "accepted") {
+    const userRoleChanged = await User.findByIdAndUpdate(
+      res.userId,
+      { role: "tour-guide" },
+      { new: true },
+    );
+
     console.log(
       userRoleChanged,
       "user role changed tourGuideRequest.service.js",

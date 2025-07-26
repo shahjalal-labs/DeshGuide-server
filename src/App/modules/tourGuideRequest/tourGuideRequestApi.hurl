@@ -4,7 +4,7 @@ GET http://localhost:5000/api/v1/tour-guide-requests
 
 # ✅ Get single tour guide request
 688036d54582db5aafd12e4f
-GET http://localhost:5000/api/v1/tour-guide-requests/687dd50b1ff686fc8ebc3cae
+GET http://localhost:5000/api/v1/tour-guide-requests/6884fdd0e64086d005edf156
 Accept: application/json
 
 
@@ -37,6 +37,6 @@ Content-Type: application/json
 
 
 # ✅ Delete tour guide request
-DELETE http://localhost:5000/api/v1/tour-guide-requests/6884c9ace64086d005edf00b
+DELETE http://localhost:5000/api/v1/tour-guide-requests/68850d7701426d0f5ab34d34
 Accept: application/json
 
