@@ -35,13 +35,36 @@ const getAllTourGuidesFromDB = async () => {
   }
 
   return guides;
-}; // ✅ Get All Users
-const getAllUsersFromDB = async () => {
+};
+// ✅ Get All Users
+/* const getAllUsersFromDB = async () => {
   const res = await User.find().sort({ createdAt: -1 });
   if (!res) {
     throw new Error("User not found");
   }
   return res;
+}; */
+
+const getAllUsersFromDB = async (filters = {}) => {
+  const { searchTerm, role } = filters;
+
+  const query = {};
+
+  if (searchTerm) {
+    query.$or = [
+      { name: { $regex: searchTerm, $options: "i" } },
+      { email: { $regex: searchTerm, $options: "i" } },
+    ];
+  }
+
+  if (role) {
+    query.role = role;
+  }
+
+  const users = await User.find(query).sort({ createdAt: -1 });
+
+  if (!users) throw new Error("Users not found");
+  return users;
 };
 
 // ✅ Get Single User by ID

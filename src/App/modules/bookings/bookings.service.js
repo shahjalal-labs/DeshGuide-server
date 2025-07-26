@@ -72,8 +72,7 @@ const getBookingsByGuide = async (guideId) => {
   );
   return result;
 };
-
-/*const getBookingsByGuide = async (guideId) => {
+/* const getBookingsByGuide = async (guideId) => {
   const bookings = await Booking.find({ guideId, paymentStatus: "paid" })
     .populate("packageId touristId")
     .lean();
@@ -86,8 +85,7 @@ const getBookingsByGuide = async (guideId) => {
     // If both are same status (including "in-review"), sort by date (newest first)
     return new Date(b.createdAt) - new Date(a.createdAt);
   });
-};*/
-
+}; */
 export const BookingServices = {
   createBooking,
   getAllBookings,

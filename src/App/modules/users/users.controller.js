@@ -21,9 +21,29 @@ const createUser = async (req, res, next) => {
   }
 };
 
-const getAllUsers = async (req, res, next) => {
+/* const getAllUsers = async (req, res, next) => {
   try {
     const result = await UserServices.getAllUsersFromDB();
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Users retrieved successfully!",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+ */
+
+const getAllUsers = async (req, res, next) => {
+  try {
+    const filters = {
+      searchTerm: req.query.search || "", // ?search=tour
+      role: req.query.role || "", // ?role=tour-guide
+    };
+
+    const result = await UserServices.getAllUsersFromDB(filters);
     sendResponse(res, {
       statusCode: 200,
       success: true,
