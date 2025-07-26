@@ -43,8 +43,6 @@ Content-Type: application/json
   "photoURL": "https://i.ibb.co/sample-image.png"
 }
 
-688036e14582db5aafd12e52 688036d54582db5aafd12e4f
-688036ca4582db5aafd12e4c
 # ✅ Delete user by ID
 DELETE http://localhost:5000/api/v1/users/688036b54582db5aafd12e46
 

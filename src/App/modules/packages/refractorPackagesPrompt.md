@@ -46,7 +46,8 @@ Also return a `.sh` script that will:
 │   ├── App
 │   │   ├── config
 │   │   │   ├── corsOptions.js
-│   │   │   └── db.js
+│   │   │   ├── db.js
+│   │   │   └── stripe.js
 │   │   ├── middlewires
 │   │   │   ├── globalError.js
 │   │   │   ├── notFound.js
@@ -84,8 +85,10 @@ Also return a `.sh` script that will:
 │   │   │   │   ├── payments.controller.js
 │   │   │   │   ├── payments.model.js
 │   │   │   │   ├── payments.route.js
-│   │   │   │   └── payments.service.js
+│   │   │   │   ├── payments.service.js
+│   │   │   │   └── refractorPaymentsPrompt.md
 │   │   │   ├── stories
+│   │   │   │   ├── refractorStoriesPrompt.md
 │   │   │   │   ├── storiesApi.hurl
 │   │   │   │   ├── stories.controller.js
 │   │   │   │   ├── stories.model.js
@@ -122,7 +125,7 @@ Also return a `.sh` script that will:
 ├── structure.md
 └── vercel.json
 
-18 directories, 73 files
+18 directories, 76 files
 ```
 
 ## 📁 Target Module Tree (packages)
@@ -236,6 +239,22 @@ const getSinglePackage = async (req, res, next) => {
   }
 };
 
+const getRandomPackages = async (req, res, next) => {
+  try {
+    // allow client to override sample size via query ?size=5
+    const size = parseInt(req.query.size, 10) || 3;
+    const result = await PackageServices.getRandomPackages(size);
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: `${size} random packages`,
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 const updatePackage = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -272,6 +291,7 @@ export const PackageControllers = {
   getSinglePackage,
   updatePackage,
   deletePackage,
+  getRandomPackages,
 };
 ```
 
@@ -285,6 +305,7 @@ const router = express.Router();
 
 router.get("/", PackageControllers.getAllPackages);
 router.post("/", PackageControllers.createPackage);
+router.get("/random", PackageControllers.getRandomPackages);
 router.get("/:id", PackageControllers.getSinglePackage);
 router.patch("/:id", PackageControllers.updatePackage);
 router.delete("/:id", PackageControllers.deletePackage);
@@ -310,7 +331,11 @@ const getAllPackages = async () => {
 const getPackageById = async (id) => {
   return await Package.findById(id);
 };
-
+const getRandomPackages = async (size = 3) => {
+  // Use aggregation $sample
+  const samples = await Package.aggregate([{ $sample: { size } }]);
+  return samples;
+};
 const updatePackage = async (id, updatedData) => {
   return await Package.findByIdAndUpdate(id, updatedData, {
     new: true,
@@ -337,17 +362,21 @@ export const PackageServices = {
   getPackageById,
   updatePackage,
   deletePackage,
+  getRandomPackages,
 };
 ```
 
 ### `packagesApi.hurl`
 ```hurl
+# ✅ Get 3 random packages (default)
+GET http://localhost:5000/api/v1/packages/random
+Accept: application/json
 # ✅ Get all packages
 GET http://localhost:5000/api/v1/packages
 Accept: application/json
 
 # ✅ Get single package
-GET http://localhost:5000/api/v1/packages/687ce1e14f0f363e8661d183
+GET http://localhost:5000/api/v1/packages/687f5b17ec95de7ba201f143
 Accept: application/json
 
 # ✅ Create new package
@@ -355,7 +384,7 @@ POST http://localhost:5000/api/v1/packages
 Content-Type: application/json
 
 {
-  "title": "Sajek Adventure",
+  "title": "Sajek Adventure 4",
   "description": "A trip to the scenic Sajek Valley",
   "price": 4500,
   "tripType": "Relaxation",
