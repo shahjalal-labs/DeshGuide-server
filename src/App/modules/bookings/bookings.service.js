@@ -1,12 +1,6 @@
 import { Booking } from "./bookings.model.js";
 import mongoose from "mongoose";
 
-// Create a new booking
-/* export const createBooking = async (bookingData) => {
-  const result = await Booking.create(bookingData);
-  return result;
-}; */
-
 import { Package } from "../packages/package.model.js";
 import { User } from "../users/users.model.js"; // assuming tourists & guides are users
 
@@ -81,47 +75,26 @@ const getBookingsByTourist = async (touristId) => {
  */
 
 const getBookingsByGuide = async (guideId) => {
-  const result = await Booking.aggregate([
-    {
-      $match: {
-        guideId: new mongoose.Types.ObjectId(guideId),
-      },
-    },
-    {
-      $addFields: {
-        sortOrder: {
-          $switch: {
-            branches: [
-              { case: { $eq: ["$status", "in-review"] }, then: 0 },
-              { case: { $eq: ["$status", "accepted"] }, then: 1 },
-            ],
-            default: 2,
-          },
-        },
-      },
-    },
-    { $sort: { sortOrder: 1, createdAt: -1 } }, // recent ones first within each group
-    {
-      $lookup: {
-        from: "packages",
-        localField: "packageId",
-        foreignField: "_id",
-        as: "package",
-      },
-    },
-    {
-      $lookup: {
-        from: "users",
-        localField: "touristId",
-        foreignField: "_id",
-        as: "tourist",
-      },
-    },
-    { $unwind: "$package" },
-    { $unwind: "$tourist" },
-  ]);
+  const result = await Booking.find({
+    guideId,
+    paymentStatus: "paid",
+  })
+    .populate("packageId touristId")
+    .lean();
 
-  return result;
+  // Custom sort: in-review → accepted → others
+  const statusPriority = {
+    "in-review": 0,
+    accepted: 1,
+  };
+
+  return result.sort((a, b) => {
+    const priorityA = statusPriority[a.status] ?? 2;
+    const priorityB = statusPriority[b.status] ?? 2;
+    return (
+      priorityA - priorityB || new Date(b.createdAt) - new Date(a.createdAt)
+    );
+  });
 };
 
 export const BookingServices = {

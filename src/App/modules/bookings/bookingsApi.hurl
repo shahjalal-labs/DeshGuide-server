@@ -43,5 +43,4 @@ GET http://localhost:5000/api/v1/bookings/tourist/688036d54582db5aafd12e4f
 
 # ✅ Get bookings of a specific guide by id
 GET http://localhost:5000/api/v1/bookings/guide/687cff8d095a1d459861b897
-Accept: application/json
 
