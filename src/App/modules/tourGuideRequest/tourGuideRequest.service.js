@@ -29,8 +29,18 @@ const updateTourGuideRequestStatus = async (id, status) => {
     { new: true },
   );
 
+  console.log(res, "tourGuideRequest.service.js", 27);
   if (res?.status === "accepted") {
-    await User.updateOne({ _id: res.userId }, { role: "tour-guide" });
+    const userRoleChanged = await User.updateOne(
+      { _id: res.userId },
+      { role: "tour-guide" },
+      { new: true },
+    );
+    console.log(
+      userRoleChanged,
+      "user role changed tourGuideRequest.service.js",
+      35,
+    );
   }
 
   return res;

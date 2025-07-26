@@ -34,13 +34,12 @@ Content-Type: application/json
 
 
 # ✅ Update user by ID
-PATCH http://localhost:5000/api/v1/users/687e37ea0d85a52d76c2eb6c
+PATCH http://localhost:5000/api/v1/users/6884fdd0e64086d005edf156
 Content-Type: application/json
 
 {
-  "name": "Updated User 2",
-  "role": "tour-guide",
-  "photoURL": "https://i.ibb.co/sample-image.png"
+  "role": "tourist",
+  "photoURL": "https://xsgames.co/randomusers/assets/avatars/male/39.jpg"
 }
 
 # ✅ Delete user by ID
