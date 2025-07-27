@@ -15,9 +15,25 @@ const createStory = async (req, res, next) => {
   }
 };
 
-const getAllStories = async (req, res, next) => {
+/* const getAllStories = async (req, res, next) => {
   try {
     const result = await StoryService.getAllStories();
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "All stories retrieved successfully!",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+}; */
+
+const getAllStories = async (req, res, next) => {
+  try {
+    const { limit = 6, skip = 0 } = req.query;
+
+    const result = await StoryService.getAllStories(limit, skip);
     sendResponse(res, {
       statusCode: 200,
       success: true,

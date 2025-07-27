@@ -89,6 +89,7 @@ const getRandomAcceptedTourGuides = async (limit = 6) => {
         "user.name": 1,
         "user.email": 1,
         "user.photo": 1,
+        "user._id": 1,
       },
     },
   );

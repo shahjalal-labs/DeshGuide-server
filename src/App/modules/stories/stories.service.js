@@ -13,8 +13,16 @@ const createStory = async (data) => {
   return await Story.create(data);
 };
 
-const getAllStories = async () => {
+/* const getAllStories = async () => {
   return await Story.find().sort({ createdAt: -1 });
+};
+ */
+
+const getAllStories = async (limit = 6, skip = 0) => {
+  return await Story.find()
+    .sort({ createdAt: -1 })
+    .skip(Number(skip))
+    .limit(Number(limit));
 };
 
 const getStoriesByUserId = async (userId) => {

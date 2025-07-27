@@ -19,6 +19,7 @@ GET http://localhost:5000/api/v1/tour-guide-requests/random-accepted?limit=all
 
 # ✅ Create new tour guide request
 POST http://localhost:5000/api/v1/tour-guide-requests
+
 Content-Type: application/json
 
 {

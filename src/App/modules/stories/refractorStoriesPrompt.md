@@ -75,6 +75,7 @@ Also return a `.sh` script that will:
 │   │   │   │   ├── bookings.route.js
 │   │   │   │   └── bookings.service.js
 │   │   │   ├── packages
+│   │   │   │   ├── packageData.json
 │   │   │   │   ├── package.model.js
 │   │   │   │   ├── packagesApi.hurl
 │   │   │   │   ├── packages.controller.js
@@ -91,6 +92,7 @@ Also return a `.sh` script that will:
 │   │   │   ├── stories
 │   │   │   │   ├── storiesApi.hurl
 │   │   │   │   ├── stories.controller.js
+│   │   │   │   ├── storiesData.json
 │   │   │   │   ├── stories.model.js
 │   │   │   │   ├── stories.route.js
 │   │   │   │   └── stories.service.js
@@ -103,6 +105,7 @@ Also return a `.sh` script that will:
 │   │   │   │   ├── submission.service.js
 │   │   │   │   └── submission.validation.js
 │   │   │   ├── tourGuideRequest
+│   │   │   │   ├── refractorTourGuideRequestPrompt.md
 │   │   │   │   ├── tourGuideRequestApi.hurl
 │   │   │   │   ├── tourGuideRequest.controller.js
 │   │   │   │   ├── tourGuideRequest.model.js
@@ -125,7 +128,7 @@ Also return a `.sh` script that will:
 ├── structure.md
 └── vercel.json
 
-18 directories, 76 files
+18 directories, 79 files
 ```
 
 ## 📁 Target Module Tree (stories)
@@ -134,11 +137,12 @@ Also return a `.sh` script that will:
 /run/media/sj/developer/web/L1B11/12mi/ass/DeshGuide/DeshGuide-server/src/App/modules/stories
 ├── storiesApi.hurl
 ├── stories.controller.js
+├── storiesData.json
 ├── stories.model.js
 ├── stories.route.js
 └── stories.service.js
 
-1 directory, 5 files
+1 directory, 6 files
 ```
 
 ## 📄 Module Files & Contents
