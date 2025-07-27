@@ -1,5 +1,16 @@
 # 🌟 DeshGuide-server
 
+admin email: admin@example.com
+admin password: admin@example.com
+sample user email:
+tourist@example.com
+sample user password:
+tourist@example.com
+sample tour guide email:
+tourguide@example.com
+sample tour guide password:
+tourguide@example.com
+
 ## ✅ Live Server URL
 
 `https://deshguide-server.vercel.app/`
