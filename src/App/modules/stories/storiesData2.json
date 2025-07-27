@@ -1,66 +1,122 @@
 [
   {
-    "title": "Boat Ride Through the Sundarbans",
-    "description": "Sailing through narrow channels of the Sundarbans, we witnessed the stillness of mangrove forests, interrupted only by distant kingfishers and the occasional crocodile basking under the sun. The dense greenery and mysterious silence made every turn feel like a scene from a nature documentary.",
-    "images": ["", "", ""],
-    "imagePrompts": [
-      "Close-up shot of a kingfisher sitting on a twisted mangrove branch over the water — wildlife photography style",
-      "Overhead drone shot of Sundarbans river maze with green trees and water channels — top-down forest delta"
+    "title": "Adventure in Sajek Valley",
+    "description": "The misty mountain views in Sajek were otherworldly. We rode on open jeeps, watched the clouds float beneath us, and stayed in wooden cottages lit with lanterns.",
+    "images": [
+      "https://i.ibb.co/CMbnwTk/1696577332901.jpg",
+      "https://i.ibb.co/KGVWzST/1696577332927.jpg",
+      "https://i.ibb.co/ydJYRpG/1696577332948.jpg"
     ],
     "userId": "68852ad7c78ef640a3f9391d",
     "userName": "Education Education",
-    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKvQsU-4NiWbFmIQT5VyTz-TpBr0RsK57u3nsWEQ4ktTIBu2A=s96-c"
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
   },
   {
-    "title": "Cycling Around Srimangal's Tea Gardens",
-    "description": "We spent the afternoon cycling through Srimangal’s vast tea estates, waving at tea pickers and stopping often to inhale the aroma of fresh leaves. The rolling green hills offered a calm unmatched by city life.",
-    "images": ["", "", ""],
-    "imagePrompts": [
-      "Cyclist riding through curving path in Srimangal tea garden, sunlight casting soft shadows on lush green slopes — wide-angle scenic shot",
-      "Portrait of a tea picker smiling, wearing traditional dress, holding a basket of tea leaves — cultural documentary style",
-      "Drone shot showing patterns of tea gardens with people scattered through hills — textured landscape with green symmetry"
+    "title": "Boat Safari in Sundarbans",
+    "description": "We explored the mangroves on a wooden boat. The silence, broken only by bird calls and occasional splashes, was serene. Spotted a deer and a monkey — unforgettable.",
+    "images": [
+      "https://i.ibb.co/z6Hp1Hq/1696577455985.jpg",
+      "https://i.ibb.co/ggCKPkr/1696577456004.jpg",
+      "https://i.ibb.co/XFQGFrk/1696577456035.jpg"
     ],
-    "userId": "68851af3606080f1804fcc36",
-    "userName": "Md. Shahjalal",
-    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKlTr-wKrSgC8FZU2ivzZO0ong8x9gZQJHsrQIyFARiB37-cw=s96-c"
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
   },
   {
-    "title": "Exploring Mahasthangarh",
-    "description": "The ancient ruins of Mahasthangarh whispered stories of empires. Walking over moss-covered stones and eroded walls, I imagined the grand city that once stood here.",
-    "images": ["", "", ""],
-    "imagePrompts": [
-      "Wide-angle shot of Mahasthangarh archaeological ruins with broken walls and grassy ground — golden afternoon light",
-      "Traveler standing near a weathered stone gate with ancient inscriptions — low angle moody photography",
-      "Top-down view of Mahasthangarh ruins and surrounding green plains — aerial history composition"
+    "title": "Mystical Morning in Srimangal",
+    "description": "Woke up to endless tea gardens covered in light fog. We visited tribal villages and tasted 7-layer tea at Nilkantha. It was calming and picturesque.",
+    "images": [
+      "https://i.ibb.co/8dcj6gd/1696577332966.jpg",
+      "https://i.ibb.co/VBsW42T/1696577332988.jpg",
+      "https://i.ibb.co/QPjD0MV/1696577333012.jpg"
     ],
-    "userId": "6885aeac38458644e7af0c45",
-    "userName": "Abdullah Fahad",
-    "userPhoto": ""
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
   },
   {
-    "title": "Sunset at Kuakata Sea Beach",
-    "description": "As the sun dipped into the Bay of Bengal, the orange and crimson waves reflected like melted fire. Locals flew kites, kids chased crabs, and the sound of waves created a peaceful rhythm.",
-    "images": ["", "", ""],
-    "imagePrompts": [
-      "Dramatic sunset over Kuakata sea beach with people walking along the shore and waves glistening orange — cinematic seaside view",
-      "Silhouette of a person flying a kite with wind blowing against waves — backlit sunset beach",
-      "Top view of Kuakata coastline with symmetrical tide marks and golden light — aerial coastal landscape"
+    "title": "Lalbagh Fort Lights",
+    "description": "Explored the history of Dhaka at Lalbagh Fort. In the evening, the lights made the ancient structure glow. It felt like time travel into Mughal Bengal.",
+    "images": [
+      "https://i.ibb.co/8mqG4pr/1696577333031.jpg",
+      "https://i.ibb.co/VJYgShs/1696577333052.jpg",
+      "https://i.ibb.co/kMdwRxX/1696577333073.jpg"
     ],
-    "userId": "68852b90c78ef640a3f93940",
-    "userName": "গণিত ভালোবাসি",
-    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocIv7_kErI1pX4G3Zu-M1fgytLhP7pMEiNjQp2dSybnJ3whLZW4=s96-c"
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
   },
   {
-    "title": "Fishing with Locals in Kaptai Lake",
-    "description": "Joining local fishermen in a traditional wooden boat on Kaptai Lake was humbling. The water was still like glass, broken only by the rhythmic net throws and laughter of the crew.",
-    "images": ["", "", ""],
-    "imagePrompts": [
-      "Fishermen in a wooden boat casting nets on calm Kaptai Lake, surrounded by misty green hills — tranquil lake shot",
-      "Close-up of hand pulling fishing net from the water with droplets sparkling — documentary style",
-      "Wide landscape of Kaptai Lake with reflection of clouds and green hills — scenic natural panorama"
+    "title": "Eco Living in Ratargul Swamp Forest",
+    "description": "Paddling silently through Ratargul's submerged forest was magical. Sunlight filtering through the canopy created a dreamlike atmosphere. Pure, raw nature.",
+    "images": [
+      "https://i.ibb.co/y06X8Jv/1696577333093.jpg",
+      "https://i.ibb.co/fp3Y4P6/1696577333115.jpg",
+      "https://i.ibb.co/vjGBzm0/1696577333137.jpg"
     ],
-    "userId": "68852645c78ef640a3f93875",
-    "userName": "Learning English",
-    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c"
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
+  },
+  {
+    "title": "Tribal Culture in Bandarban",
+    "description": "We visited Marma and Chakma villages and learned about their rich culture and crafts. Shared meals, dances, and stories under the stars. Pure hospitality.",
+    "images": [
+      "https://i.ibb.co/zVjS6gJ/1696577333161.jpg",
+      "https://i.ibb.co/8dS3Hbk/1696577333186.jpg",
+      "https://i.ibb.co/2jD49b9/1696577333210.jpg"
+    ],
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
+  },
+  {
+    "title": "A Starry Night in Sajek",
+    "description": "The sky in Sajek after sunset was unreal. No light pollution — just a blanket of stars and distant hills. We sat by a campfire till midnight.",
+    "images": [
+      "https://i.ibb.co/LJjYZhn/1696577333234.jpg",
+      "https://i.ibb.co/jvWm1Vx/1696577333258.jpg",
+      "https://i.ibb.co/Ch1f9FF/1696577333282.jpg"
+    ],
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
+  },
+  {
+    "title": "Tea Tasting in Srimangal",
+    "description": "At Nilkantha Tea Cabin, we tried the legendary 7-layer tea. Each sip was a different flavor. The surrounding gardens made the experience even richer.",
+    "images": [
+      "https://i.ibb.co/Tr7vhmW/1696577333306.jpg",
+      "https://i.ibb.co/cg1mBLx/1696577333328.jpg",
+      "https://i.ibb.co/wNfXnZC/1696577333350.jpg"
+    ],
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
+  },
+  {
+    "title": "River Cruise in Barisal",
+    "description": "Barisal’s backwaters were calm and enchanting. We cruised past floating guava markets and children waving from riverside villages. Pure countryside bliss.",
+    "images": [
+      "https://i.ibb.co/WvChstZ/1696577333372.jpg",
+      "https://i.ibb.co/DQK2S1B/1696577333396.jpg",
+      "https://i.ibb.co/fk2vpJr/1696577333419.jpg"
+    ],
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
+  },
+  {
+    "title": "Jaflong's Hidden Waterfalls",
+    "description": "Jaflong surprised us with its mix of tribal life and nature. We hiked to hidden waterfalls and swam in clear pools. It was our most spontaneous day.",
+    "images": [
+      "https://i.ibb.co/rG0yKhP/1696577333443.jpg",
+      "https://i.ibb.co/ZShbXgz/1696577333467.jpg",
+      "https://i.ibb.co/gwMkLR4/1696577333491.jpg"
+    ],
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocLZxjvUjpGHX3vGztN8kq1V0q2R-6DJl4F3UObNwJQ=s96-c"
   }
 ]
