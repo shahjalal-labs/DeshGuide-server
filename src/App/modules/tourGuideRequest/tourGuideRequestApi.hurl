@@ -7,6 +7,9 @@ GET http://localhost:5000/api/v1/tour-guide-requests
 GET http://localhost:5000/api/v1/tour-guide-requests/68851af3606080f1804fcc36
 Accept: application/json
 
+# ✅ Get Tour Guide Request by User ID
+GET http://localhost:5000/api/v1/tour-guide-requests/user/68852b90c78ef640a3f93940
+Accept: application/json
 
 GET http://localhost:5000/api/v1/tour-guide-requests/random-accepted
 ## get all accepted tour guides

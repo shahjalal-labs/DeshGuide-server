@@ -260,7 +260,11 @@
     "tripType": "Nature",
     "days": 1,
     "location": "Gazipur",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/fa7df2d2a6c248bba2a096e31e17c306/path-through-bhawal-forest-with-tall-sal-trees-and-li.jpg",
+      "https://images.deepai.org/art-image/6d1242776af24b29989fcb1f05e2a9f7/colorful-paddle-boat-floating-on-small-forest-lake-in.jpg",
+      "https://images.deepai.org/art-image/b34dc26354ae436595ba69b3a982f9c5/a-river-and-forest-scenic-beauty-with-the-sunset-thum.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,

@@ -9,6 +9,9 @@ router.get(
   "/random-accepted",
   TourGuideRequestControllers.getRandomAcceptedTourGuides,
 );
+
+router.get("/user/:userId", TourGuideRequestControllers.getRequestByUserId);
+
 router.get("/:id", TourGuideRequestControllers.getRequestById);
 router.patch("/:id", TourGuideRequestControllers.updateStatus);
 router.delete("/:id", TourGuideRequestControllers.deleteRequest);

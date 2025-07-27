@@ -49,6 +49,31 @@ const getRequestById = async (req, res, next) => {
   }
 };
 
+const getRequestByUserId = async (req, res, next) => {
+  try {
+    const result = await TourGuideRequestServices.getTourGuideRequestByUserId(
+      req.params.userId,
+    );
+
+    if (!result) {
+      return sendResponse(res, {
+        statusCode: 404,
+        success: false,
+        message: "Tour guide request not found for this user",
+        data: null,
+      });
+    }
+
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Tour guide request fetched by user ID",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 const getRandomAcceptedTourGuides = async (req, res, next) => {
   try {
     const { limit } = req.query; // get from URL like ?limit=3 or ?limit=all
@@ -107,4 +132,5 @@ export const TourGuideRequestControllers = {
   updateStatus,
   deleteRequest,
   getRandomAcceptedTourGuides,
+  getRequestByUserId,
 };
