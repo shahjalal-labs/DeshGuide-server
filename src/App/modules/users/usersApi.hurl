@@ -15,7 +15,7 @@ GET http://localhost:5000/api/v1/users?search=tour&role=tour-guide
 GET http://localhost:5000/api/v1/users/tour-guides
 
 # ✅ Get single user by ID
-GET http://localhost:5000/api/v1/users/68850d7701426d0f5ab34d34
+GET http://localhost:5000/api/v1/users/68852ad7c78ef640a3f9391d
 Accept: application/json
 
 # ✅ Get single user by email
