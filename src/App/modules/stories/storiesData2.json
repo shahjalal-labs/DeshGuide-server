@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Boat Ride Through the Sundarbans",
+    "description": "Sailing through narrow channels of the Sundarbans, we witnessed the stillness of mangrove forests, interrupted only by distant kingfishers and the occasional crocodile basking under the sun. The dense greenery and mysterious silence made every turn feel like a scene from a nature documentary.",
+    "images": ["", "", ""],
+    "imagePrompts": [
+      "Close-up shot of a kingfisher sitting on a twisted mangrove branch over the water — wildlife photography style",
+      "Overhead drone shot of Sundarbans river maze with green trees and water channels — top-down forest delta"
+    ],
+    "userId": "68852ad7c78ef640a3f9391d",
+    "userName": "Education Education",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKvQsU-4NiWbFmIQT5VyTz-TpBr0RsK57u3nsWEQ4ktTIBu2A=s96-c"
+  },
+  {
+    "title": "Cycling Around Srimangal's Tea Gardens",
+    "description": "We spent the afternoon cycling through Srimangal’s vast tea estates, waving at tea pickers and stopping often to inhale the aroma of fresh leaves. The rolling green hills offered a calm unmatched by city life.",
+    "images": ["", "", ""],
+    "imagePrompts": [
+      "Cyclist riding through curving path in Srimangal tea garden, sunlight casting soft shadows on lush green slopes — wide-angle scenic shot",
+      "Portrait of a tea picker smiling, wearing traditional dress, holding a basket of tea leaves — cultural documentary style",
+      "Drone shot showing patterns of tea gardens with people scattered through hills — textured landscape with green symmetry"
+    ],
+    "userId": "68851af3606080f1804fcc36",
+    "userName": "Md. Shahjalal",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKlTr-wKrSgC8FZU2ivzZO0ong8x9gZQJHsrQIyFARiB37-cw=s96-c"
+  },
+  {
+    "title": "Exploring Mahasthangarh",
+    "description": "The ancient ruins of Mahasthangarh whispered stories of empires. Walking over moss-covered stones and eroded walls, I imagined the grand city that once stood here.",
+    "images": ["", "", ""],
+    "imagePrompts": [
+      "Wide-angle shot of Mahasthangarh archaeological ruins with broken walls and grassy ground — golden afternoon light",
+      "Traveler standing near a weathered stone gate with ancient inscriptions — low angle moody photography",
+      "Top-down view of Mahasthangarh ruins and surrounding green plains — aerial history composition"
+    ],
+    "userId": "6885aeac38458644e7af0c45",
+    "userName": "Abdullah Fahad",
+    "userPhoto": ""
+  },
+  {
+    "title": "Sunset at Kuakata Sea Beach",
+    "description": "As the sun dipped into the Bay of Bengal, the orange and crimson waves reflected like melted fire. Locals flew kites, kids chased crabs, and the sound of waves created a peaceful rhythm.",
+    "images": ["", "", ""],
+    "imagePrompts": [
+      "Dramatic sunset over Kuakata sea beach with people walking along the shore and waves glistening orange — cinematic seaside view",
+      "Silhouette of a person flying a kite with wind blowing against waves — backlit sunset beach",
+      "Top view of Kuakata coastline with symmetrical tide marks and golden light — aerial coastal landscape"
+    ],
+    "userId": "68852b90c78ef640a3f93940",
+    "userName": "গণিত ভালোবাসি",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocIv7_kErI1pX4G3Zu-M1fgytLhP7pMEiNjQp2dSybnJ3whLZW4=s96-c"
+  },
+  {
+    "title": "Fishing with Locals in Kaptai Lake",
+    "description": "Joining local fishermen in a traditional wooden boat on Kaptai Lake was humbling. The water was still like glass, broken only by the rhythmic net throws and laughter of the crew.",
+    "images": ["", "", ""],
+    "imagePrompts": [
+      "Fishermen in a wooden boat casting nets on calm Kaptai Lake, surrounded by misty green hills — tranquil lake shot",
+      "Close-up of hand pulling fishing net from the water with droplets sparkling — documentary style",
+      "Wide landscape of Kaptai Lake with reflection of clouds and green hills — scenic natural panorama"
+    ],
+    "userId": "68852645c78ef640a3f93875",
+    "userName": "Learning English",
+    "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKqSiPMbIhsHkK6FzUQUUGYe9e8a6Nlhbhh_5SQIbcHU30KuVqG=s96-c"
+  }
+]
