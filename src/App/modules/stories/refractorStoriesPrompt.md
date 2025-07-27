@@ -166,9 +166,25 @@ const createStory = async (req, res, next) => {
   }
 };
 
-const getAllStories = async (req, res, next) => {
+/* const getAllStories = async (req, res, next) => {
   try {
     const result = await StoryService.getAllStories();
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "All stories retrieved successfully!",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+}; */
+
+const getAllStories = async (req, res, next) => {
+  try {
+    const { limit = 6, skip = 0 } = req.query;
+
+    const result = await StoryService.getAllStories(limit, skip);
     sendResponse(res, {
       statusCode: 200,
       success: true,
@@ -327,8 +343,16 @@ const createStory = async (data) => {
   return await Story.create(data);
 };
 
-const getAllStories = async () => {
+/* const getAllStories = async () => {
   return await Story.find().sort({ createdAt: -1 });
+};
+ */
+
+const getAllStories = async (limit = 6, skip = 0) => {
+  return await Story.find()
+    .sort({ createdAt: -1 })
+    .skip(Number(skip))
+    .limit(Number(limit));
 };
 
 const getStoriesByUserId = async (userId) => {

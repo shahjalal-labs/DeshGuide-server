@@ -29,7 +29,7 @@ const createStory = async (req, res, next) => {
   }
 }; */
 
-const getAllStories = async (req, res, next) => {
+/* const getAllStories = async (req, res, next) => {
   try {
     const { limit = 6, skip = 0 } = req.query;
 
@@ -38,6 +38,23 @@ const getAllStories = async (req, res, next) => {
       statusCode: 200,
       success: true,
       message: "All stories retrieved successfully!",
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+ */
+
+const getAllStories = async (req, res, next) => {
+  try {
+    const { limit, page } = req.query;
+    const result = await StoryService.getAllStories({ limit, page });
+
+    sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: "Stories fetched",
       data: result,
     });
   } catch (err) {
