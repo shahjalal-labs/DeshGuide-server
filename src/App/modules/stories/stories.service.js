@@ -1,5 +1,6 @@
 import { Story } from "./stories.model.js";
 import { User } from "../users/users.model.js"; // ✅ Import user model
+import mongoose from "mongoose";
 
 const createStory = async (data) => {
   const { userId } = data;
@@ -27,7 +28,10 @@ const getAllStories = async (limit = 6, skip = 0) => {
 
 const getStoriesByUserId = async (userId) => {
   console.log(userId, "stories.service.js", 29);
-  return await Story.find({ userId }).sort({ createdAt: -1 });
+  // return await Story.find({ userId }).sort({ createdAt: -1 });
+  return await Story.find({ userId: new mongoose.Types.ObjectId(userId) }).sort(
+    { createdAt: -1 },
+  );
 };
 
 const getStoryById = async (id) => {
