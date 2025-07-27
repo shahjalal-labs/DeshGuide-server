@@ -18,28 +18,11 @@ const createStory = async (data) => {
 };
  */
 
-/* const getAllStories = async (limit = 6, skip = 0) => {
+const getAllStories = async (limit = 6, skip = 0) => {
   return await Story.find()
     .sort({ createdAt: -1 })
     .skip(Number(skip))
     .limit(Number(limit));
-};
- */
-
-const getAllStories = async ({ limit = 6, page = 1 }) => {
-  const skip = (page - 1) * limit;
-
-  const [stories, total] = await Promise.all([
-    Story.find().sort({ createdAt: -1 }).skip(skip).limit(Number(limit)),
-    Story.countDocuments(),
-  ]);
-
-  return {
-    stories,
-    total,
-    page: Number(page),
-    totalPages: Math.ceil(total / limit),
-  };
 };
 
 const getStoriesByUserId = async (userId) => {
