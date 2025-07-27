@@ -26,6 +26,7 @@ const getAllStories = async (limit = 6, skip = 0) => {
 };
 
 const getStoriesByUserId = async (userId) => {
+  console.log(userId, "stories.service.js", 29);
   return await Story.find({ userId }).sort({ createdAt: -1 });
 };
 

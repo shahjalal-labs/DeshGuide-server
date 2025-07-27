@@ -5,7 +5,7 @@ Accept: application/json
 
 
 # ✅ Get all stories by userId
-GET http://localhost:5000/api/v1/stories/user/688036d54582db5aafd12e4f
+GET http://localhost:5000/api/v1/stories/user/68852ad7c78ef640a3f9391d
 Accept: application/json
 
 

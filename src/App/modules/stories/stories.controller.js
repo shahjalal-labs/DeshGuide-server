@@ -48,6 +48,7 @@ const getAllStories = async (req, res, next) => {
 const getStoriesByUserId = async (req, res, next) => {
   try {
     const result = await StoryService.getStoriesByUserId(req.params.userId);
+    console.log(`userId`, req.params.userId);
     sendResponse(res, {
       statusCode: 200,
       success: true,
