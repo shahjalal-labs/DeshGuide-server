@@ -206,7 +206,11 @@
     "tripType": "Historical",
     "days": 3,
     "location": "Naogaon & Bogura",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/56647f7ad23e4a21801c30422b3d6d30/panoramic-view-of-somapura-mahavihara-ruins-with-bric.jpg",
+      "https://images.deepai.org/art-image/6681118a3c4d4532a0602d5b5366d8b4/ancient-stone-wall-with-inscriptions-at-mahasthangarh.jpg",
+      "https://images.deepai.org/art-image/fd411f45710b413d9c2b65e3f99a1c44/local-guide-explaining-history-at-small-rural-museum-.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -220,11 +224,6 @@
         "day": 3,
         "activities": "Visit local museum, return by train"
       }
-    ],
-    "imagePrompts": [
-      "Panoramic view of Somapura Mahavihara ruins with brick structures and grassy lawn",
-      "Ancient stone wall with inscriptions at Mahasthangarh under soft morning light",
-      "Local guide explaining history at small rural museum near Naogaon"
     ]
   },
   {
@@ -234,7 +233,11 @@
     "tripType": "Relaxation",
     "days": 3,
     "location": "Kuakata",
-    "gallery": ["", "", ""],
+    "gallery": [
+      "https://images.deepai.org/art-image/a153c611d6904ca092d86e33c25c8391/sunrise-over-kuakata-sea-beach-with-fishermen-walking.jpg",
+      "https://images.deepai.org/art-image/c61023c3eaf344e18481cfca661f2563/tourists-sitting-on-kuakata-beach-watching-golden-sun.jpg",
+      "https://images.deepai.org/art-image/b5576a868a6f4fb5b6364f5e6d5ea5d5/buddhist-temple-structure-with-red-roof-and-prayer-fl.jpg"
+    ],
     "tourPlan": [
       {
         "day": 1,
@@ -248,11 +251,6 @@
         "day": 3,
         "activities": "Watch sunset, visit Buddhist temple, depart"
       }
-    ],
-    "imagePrompts": [
-      "Sunrise over Kuakata sea beach with fishermen walking with nets",
-      "Tourists sitting on Kuakata beach watching golden sunset reflection",
-      "Buddhist temple structure with red roof and prayer flags near beach"
     ]
   },
   {
@@ -268,11 +266,6 @@
         "day": 1,
         "activities": "Morning drive from Dhaka, jungle walk, boating, picnic, return"
       }
-    ],
-    "imagePrompts": [
-      "Path through Bhawal forest with tall sal trees and light filtering through leaves",
-      "Family having picnic on grassy field with trees in background",
-      "Colorful paddle boat floating on small forest lake in Bhawal National Park"
     ]
   }
 ]
