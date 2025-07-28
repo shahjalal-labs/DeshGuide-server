@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createJwtToken } from "./issueJwt.js";
+import { clearJwtToken, createJwtToken } from "./issueJwt.js";
 
 const router = Router();
 
