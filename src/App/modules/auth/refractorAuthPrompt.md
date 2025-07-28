@@ -56,7 +56,6 @@ Also return a `.sh` script that will:
 │   │   ├── modules
 │   │   │   ├── assignments
 │   │   │   │   ├── assignmentData.json
-│   │   │   │   ├── assignmentsApi.hur
 │   │   │   │   ├── assignmentsApi.hurl
 │   │   │   │   ├── assignments.controllers.js
 │   │   │   │   ├── assignments.model.js
@@ -131,7 +130,7 @@ Also return a `.sh` script that will:
 ├── structure.md
 └── vercel.json
 
-18 directories, 82 files
+18 directories, 81 files
 ```
 
 ## 📁 Target Module Tree (auth)
@@ -151,33 +150,6 @@ Also return a `.sh` script that will:
 
 ### `auth.middleware.js`
 ```javascript
-/* import { verifyToken } from "./jwt.js";
-
-export const authenticateUser = (req, res, next) => {
-  const token = req?.cookies?.token;
-  console.log(token, "token from client: auth.middleware.js", 5);
-  if (!token) {
-    return res.status(401).json({
-      statusCode: 401,
-      success: false,
-      message: "Unauthorized: No token",
-    });
-  }
-
-  try {
-    const decoded = verifyToken(token);
-    req.decoded = decoded; // attach user info to request
-    next();
-  } catch (err) {
-    res.status(401).json({
-      statusCode: 401,
-      success: false,
-      message: "verifyToken issue: Unauthorized: Invalid token",
-    });
-    // next(err);
-  }
-}; */
-
 import { verifyToken } from "./jwt.js";
 
 export const authenticateUser = (req, res, next) => {
@@ -276,49 +248,6 @@ export const clearJwtToken = (req, res) => {
 
 ### `jwt.js`
 ```javascript
-// import dotenv from "dotenv";
-// import jwt from "jsonwebtoken";
-// dotenv.config();
-//
-// const JWT_SECRET = process.env.JWT_SECRET;
-// const JWT_EXPIRES_IN = "1d"; // token validity
-//
-// export const generateToken = (payload) => {
-//   return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
-// };
-//
-// export const verifyTokenPrev = (req, res, next) => {
-//   const token = req?.cookies?.token;
-//   if (!token) {
-//     return res
-//       .status(401)
-//       .send({ message: " no token: unauthorized access no token" });
-//   }
-//   // console.log(`token from client:`, token);
-//   // console.log(`process.env.JWT_SECRET`, process.env.JWT_SECRET);
-//   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-//     if (err) {
-//       let digit = "33";
-//       digit = digit + 3;
-//       /* console.log(err, "err jwt.js", 21);
-//       return res
-//         .status(401)
-//         .send({ message: "unauthorized access inside veryfyToken" }); */
-//     }
-//     req.decoded = decoded;
-//     next();
-//   });
-// };
-//
-// // Fix the verifyToken function (current one has issues)
-// export const verifyToken = (token) => {
-//   try {
-//     return jwt.verify(token, JWT_SECRET);
-//   } catch (err) {
-//     throw new Error("Invalid token");
-//   }
-// };
-//
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 dotenv.config();
@@ -403,26 +332,4 @@ export const authenticateUser = (req, res, next) => {
 /**
  * @deprecated Old cookie-based verification (keep for reference)
  */
-export const verifyTokenPrev = (req, res, next) => {
-  console.warn("verifyTokenPrev is deprecated - use authenticateUser instead");
-  const token = req?.cookies?.token;
-
-  if (!token) {
-    return res.status(401).json({
-      success: false,
-      message: "No token provided",
-    });
-  }
-
-  try {
-    const decoded = verifyToken(token);
-    req.decoded = decoded;
-    next();
-  } catch (err) {
-    return res.status(401).json({
-      success: false,
-      message: err.message || "Invalid token",
-    });
-  }
-};
 ```
