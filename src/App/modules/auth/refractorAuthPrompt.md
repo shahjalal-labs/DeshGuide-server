@@ -151,7 +151,7 @@ Also return a `.sh` script that will:
 
 ### `auth.middleware.js`
 ```javascript
-import { verifyToken } from "./jwt.js";
+/* import { verifyToken } from "./jwt.js";
 
 export const authenticateUser = (req, res, next) => {
   const token = req?.cookies?.token;
@@ -176,18 +176,47 @@ export const authenticateUser = (req, res, next) => {
     });
     // next(err);
   }
+}; */
+
+import { verifyToken } from "./jwt.js";
+
+export const authenticateUser = (req, res, next) => {
+  // Get token from Authorization header
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return res.status(401).json({
+      statusCode: 401,
+      success: false,
+      message: "Unauthorized: No token provided",
+    });
+  }
+
+  const token = authHeader.split(" ")[1]; // Extract token after 'Bearer '
+
+  try {
+    const decoded = verifyToken(token);
+    req.user = decoded; // Attach user info to request
+    next();
+  } catch (err) {
+    return res.status(401).json({
+      statusCode: 401,
+      success: false,
+      message: "Unauthorized: Invalid token",
+    });
+  }
 };
 ```
 
 ### `auth.routes.js`
 ```javascript
 import { Router } from "express";
-import { createJwtToken } from "./issueJwt.js";
+import { clearJwtToken, createJwtToken } from "./issueJwt.js";
 
 const router = Router();
 
 router.post("/create-jwt", createJwtToken);
-
+router.post("/clear-jwt", clearJwtToken);
 export const AuthRoutes = router;
 ```
 
@@ -228,39 +257,172 @@ export const createJwtToken = async (req, res) => {
   });
   res.status(200).json({ message: "token issued successfully" });
 };
+
+// Add this new function
+export const clearJwtToken = (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: true, // Must match how cookie was set
+    sameSite: "none", // Must match how cookie was set
+    path: "/", // Important for cookie clearance
+  });
+
+  res.status(200).json({
+    success: true,
+    message: "Token cleared successfully",
+  });
+};
 ```
 
 ### `jwt.js`
 ```javascript
+// import dotenv from "dotenv";
+// import jwt from "jsonwebtoken";
+// dotenv.config();
+//
+// const JWT_SECRET = process.env.JWT_SECRET;
+// const JWT_EXPIRES_IN = "1d"; // token validity
+//
+// export const generateToken = (payload) => {
+//   return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
+// };
+//
+// export const verifyTokenPrev = (req, res, next) => {
+//   const token = req?.cookies?.token;
+//   if (!token) {
+//     return res
+//       .status(401)
+//       .send({ message: " no token: unauthorized access no token" });
+//   }
+//   // console.log(`token from client:`, token);
+//   // console.log(`process.env.JWT_SECRET`, process.env.JWT_SECRET);
+//   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+//     if (err) {
+//       let digit = "33";
+//       digit = digit + 3;
+//       /* console.log(err, "err jwt.js", 21);
+//       return res
+//         .status(401)
+//         .send({ message: "unauthorized access inside veryfyToken" }); */
+//     }
+//     req.decoded = decoded;
+//     next();
+//   });
+// };
+//
+// // Fix the verifyToken function (current one has issues)
+// export const verifyToken = (token) => {
+//   try {
+//     return jwt.verify(token, JWT_SECRET);
+//   } catch (err) {
+//     throw new Error("Invalid token");
+//   }
+// };
+//
+import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
+dotenv.config();
 
-const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key";
-const JWT_EXPIRES_IN = "1d"; // token validity
+const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "1d";
 
+/**
+ * Generates a JWT token with the given payload
+ * @param {Object} payload - Data to include in the token
+ * @returns {String} JWT token
+ */
 export const generateToken = (payload) => {
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
+  if (!JWT_SECRET) {
+    throw new Error("JWT_SECRET is not configured");
+  }
+  return jwt.sign(payload, JWT_SECRET, {
+    expiresIn: JWT_EXPIRES_IN,
+    algorithm: "HS256", // Explicitly specify algorithm
+  });
 };
 
-export const verifyToken = (req, res, next) => {
-  const token = req?.cookies?.token;
+/**
+ * Verifies a JWT token from Authorization header
+ * @param {String} token - JWT token to verify
+ * @returns {Object} Decoded token payload
+ * @throws {Error} If token is invalid
+ */
+export const verifyToken = (token) => {
   if (!token) {
-    return res
-      .status(401)
-      .send({ message: " no token: unauthorized access no token" });
+    throw new Error("No token provided");
   }
-  // console.log(`token from client:`, token);
-  // console.log(`process.env.JWT_SECRET`, process.env.JWT_SECRET);
-  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-    if (err) {
-      let digit = "33";
-      digit = digit + 3;
-      /* console.log(err, "err jwt.js", 21);
-      return res
-        .status(401)
-        .send({ message: "unauthorized access inside veryfyToken" }); */
+
+  if (!JWT_SECRET) {
+    throw new Error("JWT_SECRET is not configured");
+  }
+
+  try {
+    return jwt.verify(token, JWT_SECRET, { algorithms: ["HS256"] });
+  } catch (err) {
+    // Enhanced error messages
+    let errorMessage = "Invalid token";
+    if (err.name === "TokenExpiredError") {
+      errorMessage = "Token expired";
+    } else if (err.name === "JsonWebTokenError") {
+      errorMessage = "Malformed token";
     }
+    throw new Error(errorMessage);
+  }
+};
+
+/**
+ * Middleware to authenticate requests using Bearer token
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {Function} next - Express next middleware
+ */
+export const authenticateUser = (req, res, next) => {
+  try {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({
+        success: false,
+        message: "Authorization header missing or invalid",
+      });
+    }
+
+    const token = authHeader.split(" ")[1];
+    const decoded = verifyToken(token);
+
+    req.user = decoded; // Attach user to request
+    next();
+  } catch (err) {
+    return res.status(401).json({
+      success: false,
+      message: err.message || "Authentication failed",
+    });
+  }
+};
+
+/**
+ * @deprecated Old cookie-based verification (keep for reference)
+ */
+export const verifyTokenPrev = (req, res, next) => {
+  console.warn("verifyTokenPrev is deprecated - use authenticateUser instead");
+  const token = req?.cookies?.token;
+
+  if (!token) {
+    return res.status(401).json({
+      success: false,
+      message: "No token provided",
+    });
+  }
+
+  try {
+    const decoded = verifyToken(token);
     req.decoded = decoded;
     next();
-  });
+  } catch (err) {
+    return res.status(401).json({
+      success: false,
+      message: err.message || "Invalid token",
+    });
+  }
 };
 ```
