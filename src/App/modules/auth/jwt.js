@@ -1,4 +1,6 @@
+import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
+dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key";
 const JWT_EXPIRES_IN = "1d"; // token validity
@@ -7,7 +9,7 @@ export const generateToken = (payload) => {
   return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
 };
 
-export const verifyToken = (req, res, next) => {
+export const verifyTokenPrev = (req, res, next) => {
   const token = req?.cookies?.token;
   if (!token) {
     return res
@@ -28,4 +30,13 @@ export const verifyToken = (req, res, next) => {
     req.decoded = decoded;
     next();
   });
+};
+
+// Fix the verifyToken function (current one has issues)
+export const verifyToken = (token) => {
+  try {
+    return jwt.verify(token, process.env.JWT_SECRET);
+  } catch (err) {
+    throw new Error("Invalid token");
+  }
 };

@@ -10,7 +10,7 @@ Accept: application/json
 
 
 # ✅ Get a single story by ID
-GET http://localhost:5000/api/v1/stories/687e509abf17c8a9265b66dd
+GET http://localhost:5000/api/v1/stories/6885e3dbe5bd6ac36ce24fc4
 Accept: application/json
 
 

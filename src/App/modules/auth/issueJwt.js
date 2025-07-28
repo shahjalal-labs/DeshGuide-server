@@ -22,3 +22,18 @@ export const createJwtToken = async (req, res) => {
   });
   res.status(200).json({ message: "token issued successfully" });
 };
+
+// Add this new function
+export const clearJwtToken = (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: true, // Must match how cookie was set
+    sameSite: "none", // Must match how cookie was set
+    path: "/", // Important for cookie clearance
+  });
+
+  res.status(200).json({
+    success: true,
+    message: "Token cleared successfully",
+  });
+};

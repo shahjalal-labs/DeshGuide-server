@@ -20,15 +20,14 @@ tourguide@example.com
 | 📝 **Detail**           | 📌 **Value**                                                                                                         |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | 🔗 **GitHub URL**       | [https://github.com/shahjalal-labs/DeshGuide-server](https://github.com/shahjalal-labs/DeshGuide-server)             |
-| 🌐 **Live Site**        | [http://shahjalal-mern.surge.sh](http://shahjalal-mern.surge.sh)                                                     |
+| 🌐 **Live Site**        | [https://deshguide-server.vercel.app/](https://deshguide-server.vercel.app/)                                         |
 | 💻 **Portfolio GitHub** | [https://github.com/shahjalal-labs/shahjalal-portfolio-v2](https://github.com/shahjalal-labs/shahjalal-portfolio-v2) |
-| 🌐 **Portfolio Live**   | [http://shahjalal-mern.surge.sh](http://shahjalal-mern.surge.sh)                                                     |
+| 🌐 **Portfolio Live**   | [http://shahjalal-labs.surge.sh](http://shahjalal-labs.surge.sh)                                                     |
 | 📁 **Directory**        | `/run/media/sj/developer/web/L1B11/12mi/ass/DeshGuide/DeshGuide-server`                                              |
 | 📅 **Created On**       | `19/07/2025 08:27 অপরাহ্ণ শনি GMT+6`                                                                                 |
-| 📍 **Location**         | Sharifpur, Gazipur, Dhaka                                                                                            |
 | 💼 **LinkedIn**         | [https://www.linkedin.com/in/shahjalal-labs/](https://www.linkedin.com/in/shahjalal-labs/)                           |
-| 📘 **Facebook**         | [https://www.facebook.com/profile.php?id=61556383702555](https://www.facebook.com/shahjalal-labs)                    |
-| ▶️ **YouTube**          | [https://www.youtube.com/@muhommodshahjalal9811](https://www.youtube.com/@muhommodshahjalal9811)                     |
+| 📘 **Facebook**         | [https://www.facebook.com/shahjalal.labs](https://www.facebook.com/shahjalal-labs)                                   |
+| ▶️ **Twitter**          | [https://x.com/shahjalal_labs](https://x.com/shahjalal_labs)                                                         |
 
 ---
 
