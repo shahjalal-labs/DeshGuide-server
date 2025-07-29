@@ -1,6 +1,8 @@
 # 🌟 DeshGuide-server
 
-admin email: admin@example.com
+Guide Ali Hosssain
+admin email:
+admin@example.com
 admin password: admin@example.com
 sample user email:
 tourist@example.com
