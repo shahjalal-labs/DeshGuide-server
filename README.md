@@ -12,6 +12,12 @@ sample tour guide email:
 tourguide@example.com
 sample tour guide password:
 tourguide@example.com
+Admin email: admin@example.com
+Admin password: admin@example.com
+sample tour guide email: tourguide@example.com
+sample tour guide password: tourguide@example.com
+sample tourist email: tourist@example.com
+sample tourist password: tourist@example.com
 
 ## ✅ Live Server URL
 

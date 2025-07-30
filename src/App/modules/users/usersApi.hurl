@@ -2,7 +2,7 @@
 GET http://localhost:5000/api/v1/users
 
 # Search users by name or email
-GET http://localhost:5000/api/v1/users?search=tour
+GET http://localhost:5000/api/v1/users?search=tourist@example.com
 
 # Filter users by role
 GET http://localhost:5000/api/v1/users?role=tour-guide
@@ -34,12 +34,11 @@ Content-Type: application/json
 
 
 # ✅ Update user by ID
-PATCH http://localhost:5000/api/v1/users/6884fdd0e64086d005edf156
+PATCH http://localhost:5000/api/v1/users/6885ed7fca58e8b851c12be6
 Content-Type: application/json
 
 {
-  "role": "tourist",
-  "photoURL": "https://xsgames.co/randomusers/assets/avatars/male/39.jpg"
+  "name": "Tourist Jamilur Rahman"
 }
 
 # ✅ Delete user by ID
