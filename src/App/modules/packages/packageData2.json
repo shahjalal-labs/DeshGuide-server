@@ -1,0 +1,224 @@
+[
+  {
+    "title": "Tanguar Haor Floating Escape",
+    "description": "Explore the vast wetland of Tanguar Haor on a houseboat surrounded by endless sky and water. Perfect for bird lovers and serenity seekers.",
+    "price": 5600,
+    "tripType": "Nature",
+    "days": 3,
+    "location": "Tanguar Haor",
+    "gallery": [
+      "https://images.deepai.org/art-image/91e1d6d4eae747b78e3357790371451f/villagers-fishing-on-small-boats-in-golden-evening-li.jpg",
+      "https://images.deepai.org/art-image/91e1d6d4eae747b78e3357790371451f/villagers-fishing-on-small-boats-in-golden-evening-li.jpg",
+      "https://images.deepai.org/art-image/e536529a908a4ef6ac8f46c18f0aa279/traditional-wooden-houseboat-floating-on-vast-tanguar.jpg"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Depart from Sunamganj, board houseboat, enjoy sunset"
+      },
+      {
+        "day": 2,
+        "activities": "Explore haor islands, birdwatching, traditional meals"
+      },
+      {
+        "day": 3,
+        "activities": "Swim in the haor, rest on deck, return trip"
+      }
+    ]
+  },
+  {
+    "title": "Jaflong River & Stone Collector's Journey",
+    "description": "Discover the mystic Dawki River, traditional stone collecting at Jaflong, and the green hills along the Bangladesh-India border.",
+    "price": 4900,
+    "tripType": "Nature",
+    "days": 2,
+    "location": "Jaflong, Sylhet",
+    "gallery": [
+      "Crystal-clear Dawki River flowing between green hills with boats",
+      "Bangladeshi woman collecting stones from shallow river at Jaflong",
+      "Foggy morning view of Indian Meghalaya hills across the river"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Departure from Sylhet, boat ride on Dawki River, explore Jaflong hills"
+      },
+      {
+        "day": 2,
+        "activities": "Visit stone collection area, photography, return to Sylhet"
+      }
+    ]
+  },
+  {
+    "title": "Bagerhat Mosque City Heritage Walk",
+    "description": "Walk through the UNESCO World Heritage site of Bagerhat, visiting centuries-old mosques and historical Islamic architecture.",
+    "price": 4400,
+    "tripType": "Historical",
+    "days": 2,
+    "location": "Bagerhat",
+    "gallery": [
+      "Sixty Dome Mosque in Bagerhat with soft golden sunlight and visitors walking around",
+      "Stone-carved minaret and historical plaque under shady trees",
+      "Local guide explaining mosque history to a tourist group"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Arrive in Bagerhat, visit Sixty Dome Mosque and museum"
+      },
+      {
+        "day": 2,
+        "activities": "Explore nearby mosques and mausoleums, return home"
+      }
+    ]
+  },
+  {
+    "title": "Sonargaon Folk & Craft Village Day Tour",
+    "description": "Visit the historic capital of Bengal, explore traditional crafts, and roam Panam City’s colonial streets.",
+    "price": 1800,
+    "tripType": "Cultural",
+    "days": 1,
+    "location": "Sonargaon, Narayanganj",
+    "gallery": [
+      "Ancient colonial buildings in Panam Nagar with faded walls and cobbled path",
+      "Traditional craftsman weaving at Sonargaon Folk Museum",
+      "Colorful rickshaws parked beside heritage brick structures"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Morning trip from Dhaka, visit Panam City, folk museum, and artisan workshops"
+      }
+    ]
+  },
+  {
+    "title": "Chandranath Hill Sunrise Hike",
+    "description": "An early morning climb to Chandranath Temple with a view of rolling hills and sunrise. A sacred and scenic trek for hikers.",
+    "price": 3100,
+    "tripType": "Adventure",
+    "days": 2,
+    "location": "Sitakunda, Chittagong",
+    "gallery": [
+      "Hikers climbing forest trail with sun rays breaking through trees",
+      "Chandranath Temple at hilltop under morning golden sky",
+      "Aerial view of Sitakunda hills with green valley below"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Evening arrival at Sitakunda, stay in hill resort"
+      },
+      {
+        "day": 2,
+        "activities": "Early hike to Chandranath, meditation, return by noon"
+      }
+    ]
+  },
+  {
+    "title": "Moheshkhali Island Temple & Salt Farm Tour",
+    "description": "A unique mix of spirituality and coastal village life with visits to Adinath Temple and salt-producing fields.",
+    "price": 3900,
+    "tripType": "Cultural",
+    "days": 2,
+    "location": "Moheshkhali, Cox's Bazar",
+    "gallery": [
+      "Adinath Temple on hilltop overlooking ocean during sunset",
+      "Workers drying salt under sun on flat white salt fields",
+      "Fishing boats docked at Moheshkhali shore under cloudy sky"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Boat ride to Moheshkhali, temple visit, salt field tour"
+      },
+      {
+        "day": 2,
+        "activities": "Explore local village, traditional meals, return trip"
+      }
+    ]
+  },
+  {
+    "title": "Karamjol Mini Safari in Sundarbans",
+    "description": "A beginner’s taste of Sundarbans wildlife with watch towers, boardwalks, and mangrove experiences in a single day.",
+    "price": 2700,
+    "tripType": "Nature",
+    "days": 1,
+    "location": "Karamjol, Sundarbans",
+    "gallery": [
+      "Wooden boardwalk through dense mangrove forest in morning mist",
+      "Monkey sitting on railing near Karamjol animal enclosure",
+      "Watch tower view of vast Sundarbans canopy and winding river"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Boat from Khulna, guided walk in Karamjol, forest views, return"
+      }
+    ]
+  },
+  {
+    "title": "Patenga Beach Urban Getaway",
+    "description": "Quick urban retreat to Patenga beach with snacks, sea breeze, and Chittagong city vibe.",
+    "price": 2400,
+    "tripType": "Relaxation",
+    "days": 1,
+    "location": "Chittagong",
+    "gallery": [
+      "Sunset over Patenga Beach with food stalls and visitors sitting on rocks",
+      "People enjoying street food under colorful umbrellas near beach",
+      "Fishing boat silhouettes with golden horizon at Patenga"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Bus to Chittagong, beach visit, street food tour, return"
+      }
+    ]
+  },
+  {
+    "title": "Mirpur Botanical & Zoo Family Tour",
+    "description": "Enjoy a full day at Dhaka's greenest corner with exotic animals, gardens, and fun train rides for kids.",
+    "price": 1500,
+    "tripType": "Other",
+    "days": 1,
+    "location": "Dhaka",
+    "gallery": [
+      "Kids watching animals in open zoo with green trees in background",
+      "Botanical garden walkway with families walking under shade",
+      "Miniature train ride in park with kids waving"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Visit zoo and garden, lunch on site, kids train ride, picnic"
+      }
+    ]
+  },
+  {
+    "title": "Rajshahi Mango & Silk Festival Tour",
+    "description": "Indulge in Rajshahi’s sweet mangoes, visit silk factories, and enjoy riverside evenings in this cultural gem of North Bengal.",
+    "price": 4700,
+    "tripType": "Cultural",
+    "days": 3,
+    "location": "Rajshahi",
+    "gallery": [
+      "Local farmer holding fresh ripe mangoes under orchard tree",
+      "Worker weaving silk thread on loom in traditional Rajshahi workshop",
+      "Sunset over Padma River with boats and mango stalls nearby"
+    ],
+    "tourPlan": [
+      {
+        "day": 1,
+        "activities": "Train to Rajshahi, mango orchard visit"
+      },
+      {
+        "day": 2,
+        "activities": "Silk factory tour, traditional lunch, explore city"
+      },
+      {
+        "day": 3,
+        "activities": "Visit Padma riverbank, shopping, return"
+      }
+    ]
+  }
+]
