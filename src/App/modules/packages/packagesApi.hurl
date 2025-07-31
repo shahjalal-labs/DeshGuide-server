@@ -6,7 +6,7 @@ GET http://localhost:5000/api/v1/packages
 Accept: application/json
 
 # ✅ Get single package
-GET http://localhost:5000/api/v1/packages/687f5b17ec95de7ba201f143
+GET http://localhost:5000/api/v1/packages/688acd2e0fdea3b0ba6108c7
 Accept: application/json
 
 # ✅ Create new package
@@ -42,13 +42,16 @@ Content-Type: application/json
   }
 
 # ✅ Update package
-PATCH http://localhost:5000/api/v1/packages/687ce1e14f0f363e8661d183
+PATCH http://localhost:5000/api/v1/packages/688acd2e0fdea3b0ba6108c7
 Content-Type: application/json
-
 {
-  "price": 5000
-}
+    "gallery": [
+      "https://images.deepai.org/art-image/723d09e36c894587901e1aa91850b582/migratory-birds-flying-over-wetland-with-reflection-i.jpg",
+      "https://images.deepai.org/art-image/91e1d6d4eae747b78e3357790371451f/villagers-fishing-on-small-boats-in-golden-evening-li.jpg",
+      "https://images.deepai.org/art-image/e536529a908a4ef6ac8f46c18f0aa279/traditional-wooden-houseboat-floating-on-vast-tanguar.jpg"
+    ]
 
+}
 # ✅ Delete package
 DELETE http://localhost:5000/api/v1/packages/687ce1e14f0f363e8661d183
 Accept: application/json
