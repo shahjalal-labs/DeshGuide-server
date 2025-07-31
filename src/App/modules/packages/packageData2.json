@@ -72,6 +72,26 @@
       }
     ]
   },
+  #33 /////
+  tourist stories 
+  {
+  "title": "Sunset Serenity at Hakaluki Haor",
+  "description": "As the sun dipped below the horizon, golden hues spread across the vast wetlands. I sat on a boat, gently swaying with the ripples, watching flocks of birds return home. The calm water mirrored the sky, and for a moment, everything felt still and sacred.",
+  "images": [
+    "https://tds-images.thedailystar.net/sites/default/files/styles/big_202/public/images/2022/06/01/hakaluki_sakib_ahmed.jpg",
+    "https://tds-images.thedailystar.net/sites/default/files/styles/big_202/public/images/2022/06/01/nikli.jpg"
+  ],
+}
+
+  tourguide request tourist will request for guide
+  {
+  "userId": "6884fdd0e64086d005edf156",
+  "title": "Experienced Mountain Guide",
+  "reason": "I love guiding tourists and know every trail in the hills",
+  "cvLink": "https://example.com/cv/john_doe.pdf",
+  "status": "pending"
+}
+   admin packageData
   {
     "title": "Sonargaon Folk & Craft Village Day Tour",
     "description": "Visit the historic capital of Bengal, explore traditional crafts, and roam Panam City’s colonial streets.",
@@ -79,6 +99,11 @@
     "tripType": "Cultural",
     "days": 1,
     "location": "Sonargaon, Narayanganj",
+    "gallery": [
+      "https://images.deepai.org/art-image/5a0d89420fae486db00e86c2c920af96/sixty-dome-mosque-in-bagerhat-with-soft-golden-sunlig.jpg",
+      "https://images.deepai.org/art-image/7e2a54b5c5f7483f9d75c9722f293151/local-guide-explaining-mosque-history-to-a-tourist-gr.jpg",
+      "https://images.deepai.org/art-image/125b29682e8e4907bb4a1c5616874379/stone-carved-minaret-and-historical-plaque-under-shad.jpg"
+    ],
     "gallery": [
       "Ancient colonial buildings in Panam Nagar with faded walls and cobbled path",
       "Traditional craftsman weaving at Sonargaon Folk Museum",
